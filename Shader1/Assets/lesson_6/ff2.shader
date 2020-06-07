@@ -8,14 +8,17 @@ Shader "Sbin/ff2"{
 		_Specular("GaoGuang",color)=(1,1,1,1)
 		_Shininess("GaoGuangQuYu",range(0,8))=4
 		_Emission("ZiFaGuang",color)=(1,1,1,1)
-		_MainTex("MainTex",2D)=""
-		_MainTex2("MainTex2",2D)=""
+		_MainTex("MainTex",2D)= "white" {}
+		_MainTex2("MainTex2",2D)="white" {}
+		_ConstantColor("ConstantColor",color)=(1,1,1,0.3)
 	}
 
 	SubShader
 	{
+		Tags {"Queue"="Transparent"} //渲染队列 用来表示渲染的先后顺序
 		pass
 		{
+			Blend SrcAlpha OneMinusSrcAlpha
 			//color(1,0,1,1)  //固定颜色
 			//color[_Color2]   //可变颜色
 			Material
@@ -39,7 +42,9 @@ Shader "Sbin/ff2"{
 
 			Settexture[_MainTex2]
 			{   //Previous 表示所有之前采样计算结果
-				Combine texture * Previous double 
+				ConstantColor[_ConstantColor]
+				//Combine texture * Previous double,texture*Constant
+				Combine texture * Previous double,Constant //Constant表示自定义透明度
 			}
 		}
 	}
