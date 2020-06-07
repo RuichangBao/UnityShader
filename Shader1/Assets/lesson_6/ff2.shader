@@ -1,4 +1,4 @@
-Shader "Sbin/ff1"{
+Shader "Sbin/ff2"{
 
 	Properties //属性
 	{
@@ -8,6 +8,8 @@ Shader "Sbin/ff1"{
 		_Specular("GaoGuang",color)=(1,1,1,1)
 		_Shininess("GaoGuangQuYu",range(0,8))=4
 		_Emission("ZiFaGuang",color)=(1,1,1,1)
+		_MainTex("MainTex",2D)=""
+		_MainTex2("MainTex2",2D)=""
 	}
 
 	SubShader
@@ -26,6 +28,19 @@ Shader "Sbin/ff1"{
 			}
 			Lighting on			//是否打开光照顶点光照(打开光照后 照射光颜色不在改变只是显示漫反光颜色)
 			Separatespecular on  //独立的镜面的高光
+
+			Settexture[_MainTex]
+			{
+			    //Combine texture  //仅仅使用贴图
+				Combine texture * Primary double //* Primary 代表了所有计算了材质光照的颜色(顶点光照)
+													//因为两个小于1的浮点值相乘更小 所有乘以2倍 double
+				//Combine texture * Primary quad	//quad四倍
+			}
+
+			Settexture[_MainTex2]
+			{   //Previous 表示所有之前采样计算结果
+				Combine texture * Previous double 
+			}
 		}
 	}
 }
