@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Gift01_ball01_a
+  m_Shader: {fileID: 4800000, guid: b844e9d374a9b41448fa82c932add254, type: 3}
+  m_ShaderKeywords: _LOCALCUBEMAP_ON _NORMALMAP _PARALLAXMAP _SPPBR_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpTex:
+        m_Texture: {fileID: 2800000, guid: 1c4d9434602570d4e8f9d948a0f56dd9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailBumpTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EnvCubemap:
+        m_Texture: {fileID: 8900000, guid: 177c494c2c5c0e0429256950a5431b3e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 514b022256a0a9c4fa19513a6c042f54, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RefTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ReflectCube:
+        m_Texture: {fileID: 8900000, guid: 93e754b1f87350d4bacfd7205604cbd6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SparkleColorTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ALPHAPREMULTIPLY_ON: 0
+    - _ALPHATEST_ON: 0
+    - _AlphaClip: 0
+    - _Blend_ON: 0
+    - _BloomFactor: 1
+    - _BumpScale: 1
+    - _BumpTexScale: 1
+    - _Cull: 2
+    - _CullMode: 2
+    - _Cutoff: 0.5
+    - _DISSOLVE_ON: 0
+    - _DetailNormalMapScale: 1
+    - _DissolveWidth: 0.1
+    - _DstBlend: 0
+    - _DstBlendMode: 0
+    - _EmissionBakedStrength: 1
+    - _EnvIntensity: 1
+    - _FOG_ON: 0
+    - _FogEnd: 0
+    - _FogStart: 5
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _IlluminStrength: 0
+    - _MASKTEX_ON: 0
+    - _Metallic: 0.85
+    - _Mode: 0
+    - _NormalScale: 1
+    - _OcclusionStrength: 1
+    - _Outline: 0
+    - _PARALLAXMAP: 0
+    - _Parallax: 0.02
+    - _RAMP_ON: 0
+    - _REF_PLANE_ON: 0
+    - _RampSmooth: 0.1
+    - _RampThreshold: 0.5
+    - _RefTexIntensity: 1
+    - _ReflectRoughness: 0
+    - _RimPower: 0.75
+    - _RimWeight: 1
+    - _SIMPLIFY_ON: 0
+    - _SPPBR_ON: 1
+    - _Smoothness: 0.85
+    - _SmoothnessTextureChannel: 0
+    - _SparkleDensity: 1
+    - _SparkleDependency: 0.9
+    - _SparkleRoughness: 0.001
+    - _SparkleScaleMin: 0.5
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _SrcBlendMode: 1
+    - _Surface: 0
+    - _UV3_ON: 0
+    - _UVSec: 0
+    - _ZTestMode: 2
+    - _ZWrite: 1
+    - _ZWriteMode: 1
+    m_Colors:
+    - _BlendColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BlendParam: {r: 0, g: 1, b: 0, a: 0}
+    - _Color: {r: 0.55, g: 0.55, b: 0.52250004, a: 1}
+    - _DissolveColor: {r: 0.8, g: 0.5, b: 0.2, a: 1}
+    - _EmissionColor: {r: 0.752, g: 0.71063995, b: 0.661008, a: 1}
+    - _FogColor: {r: 0.5, g: 0.7, b: 0.5, a: 1}
+    - _MainTexColor: {r: 5.992157, g: 5.992157, b: 5.992157, a: 1}
+    - _OutlineColor: {r: 1, g: 0, b: 0, a: 1}
+    - _RampColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _ReflectColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RimColor: {r: 4.237095, g: 2.9948053, b: 1.5084945, a: 1}
+    - _SparkleColor: {r: 5.992157, g: 4.1725492, b: 2.8235295, a: 1}
+    - _SparkleSize: {r: 5, g: 5, b: 0.01, a: 0.01}
