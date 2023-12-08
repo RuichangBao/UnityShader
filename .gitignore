@@ -2,6 +2,7 @@
 *.sln
 *.csproj
 *.vsconfig
+*.cubemap
 Library
 UnityPackageManager
 Temp
