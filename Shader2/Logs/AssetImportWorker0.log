@@ -273,3 +273,150 @@ Received Import Request.
   path: Assets/UnityShadersBook/Chapter10/Untitled-1.shader
   artifactKey: Guid(e1bc41330429ca9418e631fd43fb8f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/UnityShadersBook/Chapter10/Untitled-1.shader using Guid(e1bc41330429ca9418e631fd43fb8f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6b1def18fd33ceeb028d424eac35b4b') in 0.030255 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010099 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.024 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1025ms)
+		BeginReloadAssembly (185ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (64ms)
+		EndReloadAssembly (731ms)
+			LoadAssemblies (88ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (203ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (370ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (49ms)
+				ProcessInitializeOnLoadAttributes (173ms)
+				ProcessInitializeOnLoadMethodAttributes (116ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 6.32 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2215 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 49 unused Assets / (25.6 KB). Loaded Objects now: 2767.
+Memory consumption went from 95.1 MB to 95.1 MB.
+Total: 6.528000 ms (FindLiveObjects: 0.228700 ms CreateObjectMapping: 0.061600 ms MarkObjects: 6.185200 ms  DeleteObjects: 0.051300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 5503.222215 seconds.
+  path: Assets/UnityShadersBook/Chapter10/mirror.shader
+  artifactKey: Guid(a340fa0b43810a74a9a80938db0f7fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/mirror.shader using Guid(a340fa0b43810a74a9a80938db0f7fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd735fc47d8b1ddc68663725141c56a57') in 0.029649 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.020342 seconds.
+  path: Assets/UnityShadersBook/Chapter10/Mirror.shader
+  artifactKey: Guid(a340fa0b43810a74a9a80938db0f7fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/Mirror.shader using Guid(a340fa0b43810a74a9a80938db0f7fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83788c2f78295cbd599660acf6c200fe') in 0.003274 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.411864 seconds.
+  path: Assets/UnityShadersBook/Chapter10/Mirror.unity
+  artifactKey: Guid(11ecbd82779f83a4d9738d355cc18a5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/Mirror.unity using Guid(11ecbd82779f83a4d9738d355cc18a5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20d0d6f88bfc11849811065f268371cf') in 0.001783 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 54.467707 seconds.
+  path: Assets/UnityShadersBook/Chapter10/Mirror.shader
+  artifactKey: Guid(a340fa0b43810a74a9a80938db0f7fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/Mirror.shader using Guid(a340fa0b43810a74a9a80938db0f7fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e31a1b798829861af5daa47c454e46c') in 0.003745 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 166.705780 seconds.
+  path: Assets/Scenes/Chapter10/Scene_10_2_1.unity
+  artifactKey: Guid(a268c06e0189d40ea9c8ae60bdac6b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Chapter10/Scene_10_2_1.unity using Guid(a268c06e0189d40ea9c8ae60bdac6b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '700c51ada3496e272758a6cb388b9256') in 0.001540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.330556 seconds.
+  path: Assets/Scenes/Chapter10/Scene_10_2_1Settings.lighting
+  artifactKey: Guid(efd330afc4e6d394ca1d1aa8d7c96481) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Chapter10/Scene_10_2_1Settings.lighting using Guid(efd330afc4e6d394ca1d1aa8d7c96481) Importer(815301076,1909f56bfc062723c751e8b465ee728b) LightingSettings: switching bake backend from 1 to 0.
+ -> (artifact id: '66778467961ec07e5dea163e85c92cd3') in 0.004457 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.238290 seconds.
+  path: Assets/Scenes/Chapter10
+  artifactKey: Guid(a529f6c67aeb9f14fb5e1cd208c734ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Chapter10 using Guid(a529f6c67aeb9f14fb5e1cd208c734ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2a08a6530b615d039d7c99a73c581bb') in 0.001727 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.714348 seconds.
+  path: Assets/UnityShadersBook/Chapter10/Mirror.unity
+  artifactKey: Guid(a268c06e0189d40ea9c8ae60bdac6b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/Mirror.unity using Guid(a268c06e0189d40ea9c8ae60bdac6b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4861420b14446c3fe9134530bdb7d2a') in 0.001340 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.595261 seconds.
+  path: Assets/UnityShadersBook/Chapter10/MirrorSettings.lighting
+  artifactKey: Guid(efd330afc4e6d394ca1d1aa8d7c96481) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/MirrorSettings.lighting using Guid(efd330afc4e6d394ca1d1aa8d7c96481) Importer(815301076,1909f56bfc062723c751e8b465ee728b) LightingSettings: switching bake backend from 1 to 0.
+ -> (artifact id: 'e89ee3638577ea9c5f4f43d1e09c6633') in 0.001995 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.732219 seconds.
+  path: Assets/AlphaBlend/Texture/Materials/001.mat
+  artifactKey: Guid(9c05d874130d51147af89f2405570705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AlphaBlend/Texture/Materials/001.mat using Guid(9c05d874130d51147af89f2405570705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ef295c5803b2fd5bb39d1d298d1b2fc') in 0.247986 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 81.209316 seconds.
+  path: Assets/UnityShadersBook/Chapter10/Mirror.unity
+  artifactKey: Guid(a268c06e0189d40ea9c8ae60bdac6b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/Mirror.unity using Guid(a268c06e0189d40ea9c8ae60bdac6b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccd9aa143be6f2dddfb6f8c5a948ee62') in 0.001502 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.775231 seconds.
+  path: Assets/UnityShadersBook/Chapter10/MirrorTexture.renderTexture
+  artifactKey: Guid(c14c8906444dfff4d82b773efcdf6b1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/MirrorTexture.renderTexture using Guid(c14c8906444dfff4d82b773efcdf6b1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5c88e4dcebd236a7b83772d6efdee93') in 0.014124 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 217.896621 seconds.
+  path: Assets/UnityShadersBook/Chapter10/MirrorTexture.renderTexture
+  artifactKey: Guid(c14c8906444dfff4d82b773efcdf6b1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/MirrorTexture.renderTexture using Guid(c14c8906444dfff4d82b773efcdf6b1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fe8991e47d173f29e83bdd068dfe513') in 0.006024 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 60.533657 seconds.
+  path: Assets/UnityShadersBook/Chapter10/MirrorTexture.renderTexture
+  artifactKey: Guid(c14c8906444dfff4d82b773efcdf6b1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/MirrorTexture.renderTexture using Guid(c14c8906444dfff4d82b773efcdf6b1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '247c1098a28d29fc273ee21141bd187d') in 0.005361 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 262.978816 seconds.
+  path: Assets/UnityShadersBook/Chapter10/Mirror.shader
+  artifactKey: Guid(a340fa0b43810a74a9a80938db0f7fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/Mirror.shader using Guid(a340fa0b43810a74a9a80938db0f7fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bb8660d3bad5695e565dbcf79f545d4') in 0.002606 seconds 
