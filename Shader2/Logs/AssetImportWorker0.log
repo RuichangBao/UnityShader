@@ -1,0 +1,275 @@
+Using pre-set license
+Built from '2021.3/china_unity/release' branch; Version is '2021.3.19f1c1 (b8e3cea1e9d3) revision 12116942'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'zh' Physical Memory: 16332 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Program Files\Unity 2021.3.19f1c1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/GitProject/UnityShader/Shader2
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+51057
+Successfully changed project path to: D:/GitProject/UnityShader/Shader2
+D:/GitProject/UnityShader/Shader2
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [31480] Host "[IP] 192.168.3.89 [Port] 0 [Flags] 2 [Guid] 959520113 [EditorId] 959520113 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-LO07KHH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [31480] Host "[IP] 192.168.3.89 [Port] 0 [Flags] 2 [Guid] 959520113 [EditorId] 959520113 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-LO07KHH) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+AS: AutoStreaming module initializing.
+Refreshing native plugins compatible for Editor in 52.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.19f1c1 (b8e3cea1e9d3)
+[Subsystems] Discovering subsystems at path D:/Program Files/Unity 2021.3.19f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/GitProject/UnityShader/Shader2/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 750 Ti (ID=0x1380)
+    Vendor:   NVIDIA
+    VRAM:     4051 MB
+    Driver:   31.0.15.3713
+Initialize mono
+Mono path[0] = 'D:/Program Files/Unity 2021.3.19f1c1/Editor/Data/Managed'
+Mono path[1] = 'D:/Program Files/Unity 2021.3.19f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Program Files/Unity 2021.3.19f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56800
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Program Files/Unity 2021.3.19f1c1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/Program Files/Unity 2021.3.19f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003559 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+InvalidOperationException: Cannot start process because a file name has not been provided.
+  at System.Diagnostics.Process.Start () [0x00024] in <8c9cb336fa2042c285391d24de6e4092>:0 
+  at (wrapper remoting-invoke-with-check) System.Diagnostics.Process.Start()
+  at UnityEditor.Android.ProgramAsShellExecute.Start (System.Diagnostics.ProcessStartInfo psi) [0x0000e] in <817a7b1592114b8780b56aa797b594d2>:0 
+  at UnityEditor.Android.Command.RunWithShellExecute (System.String command, System.String args, System.String workingdir, System.String errorMsg) [0x0003e] in <817a7b1592114b8780b56aa797b594d2>:0 
+  at UnityEditor.Android.ADB.StartServer () [0x00013] in <817a7b1592114b8780b56aa797b594d2>:0 
+  at UnityEditor.Android.ADB.Run (System.String[] command, UnityEditor.Android.Command+WaitingForProcessToExit waitingForProcessToExit, System.String errorMsg) [0x0000b] in <817a7b1592114b8780b56aa797b594d2>:0 
+  at UnityEditor.Android.AndroidDeploymentTargetsExtension.GetKnownTargets (UnityEditor.DeploymentTargets.IDeploymentTargetsMainThreadContext context, UnityEditor.ProgressHandler progressHandler) [0x00284] in <817a7b1592114b8780b56aa797b594d2>:0 
+  at UnityEditor.Android.TargetScanWorker.ScanSync () [0x00039] in <817a7b1592114b8780b56aa797b594d2>:0 
+  at UnityEditor.Android.TargetExtension.OnUsbDevicesChanged (UnityEditor.Hardware.UsbDevice[] usbDevices) [0x00081] in <817a7b1592114b8780b56aa797b594d2>:0 
+  at UnityEditor.Android.TargetExtension.OnLoad () [0x0008d] in <817a7b1592114b8780b56aa797b594d2>:0 
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <830c43131bfd493c992eda1d9502c102>:0 
+
+Refreshing native plugins compatible for Editor in 39.61 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.643 seconds
+Domain Reload Profiling:
+	ReloadAssembly (643ms)
+		BeginReloadAssembly (87ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (453ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (97ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (288ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (132ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (40ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (80ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Registering precompiled user dll's ...
+Registered in 0.006906 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.898 seconds
+Domain Reload Profiling:
+	ReloadAssembly (898ms)
+		BeginReloadAssembly (99ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (692ms)
+			LoadAssemblies (72ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (167ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (380ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (56ms)
+				ProcessInitializeOnLoadAttributes (177ms)
+				ProcessInitializeOnLoadMethodAttributes (124ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2284 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 60 unused Assets / (58.3 KB). Loaded Objects now: 2730.
+Memory consumption went from 97.9 MB to 97.8 MB.
+Total: 5.836400 ms (FindLiveObjects: 0.220000 ms CreateObjectMapping: 0.072600 ms MarkObjects: 5.427500 ms  DeleteObjects: 0.115400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1779161.966569 seconds.
+  path: Assets/UnityShadersBook/Chapter10/Refraction.unity
+  artifactKey: Guid(6d9f49baa46b6b2419050f6623355698) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/Refraction.unity using Guid(6d9f49baa46b6b2419050f6623355698) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41e3ace25b0bd69eacf6f595aaf7e07f') in 0.005629 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 62.933922 seconds.
+  path: Assets/UnityShadersBook/Chapter10/RefractionCubemap 1.cubemap
+  artifactKey: Guid(c52274840056b5043b632ff93a78f870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/RefractionCubemap 1.cubemap using Guid(c52274840056b5043b632ff93a78f870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dae7f22498658aef6db7d273444e4963') in 2.549516 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.764178 seconds.
+  path: Assets/UnityShadersBook/Chapter10/RefractionCubemap 2.cubemap
+  artifactKey: Guid(8f617baae40cef645ada34269ec06869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/RefractionCubemap 2.cubemap using Guid(8f617baae40cef645ada34269ec06869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce083dcc84c300ccd1f26c5cc7ee7542') in 1.243051 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/UnityShadersBook/Chapter10/RefractionCubemap.cubemap
+  artifactKey: Guid(8b24387d0b118564eb2104af5bab1ff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/RefractionCubemap.cubemap using Guid(8b24387d0b118564eb2104af5bab1ff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04a5285d69d7d381754ee018ee71eb34') in 1.219516 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/UnityShadersBook/Chapter10/ReflectionCubemap.cubemap
+  artifactKey: Guid(a8b3e37e26c06b541a42715da0368101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/ReflectionCubemap.cubemap using Guid(a8b3e37e26c06b541a42715da0368101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f198541bc99e3072305e58b04667683e') in 1.214448 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 29.514738 seconds.
+  path: Assets/UnityShadersBook/Chapter10/SchlickCubemap.cubemap
+  artifactKey: Guid(c52274840056b5043b632ff93a78f870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/SchlickCubemap.cubemap using Guid(c52274840056b5043b632ff93a78f870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c67c8b9bcb738d8fc8ced03fa4dc5e9') in 1.225320 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.463719 seconds.
+  path: Assets/UnityShadersBook/Chapter10/Schlick.unity
+  artifactKey: Guid(e95a7a0ae115192448b811f6da3703e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/Schlick.unity using Guid(e95a7a0ae115192448b811f6da3703e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fed798adb04af85719b690b15d7ec8d') in 0.001707 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 68.296720 seconds.
+  path: Assets/UnityShadersBook/Chapter10/SchlickCubemap.cubemap
+  artifactKey: Guid(c52274840056b5043b632ff93a78f870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/SchlickCubemap.cubemap using Guid(c52274840056b5043b632ff93a78f870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ed63ce972d49c850a3dd6ca629a8e98') in 1.235161 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 103.708748 seconds.
+  path: Assets/UnityShadersBook/Chapter10/SchlickCubemap.cubemap
+  artifactKey: Guid(c52274840056b5043b632ff93a78f870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/SchlickCubemap.cubemap using Guid(c52274840056b5043b632ff93a78f870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d8e8e8fbd2364bf25c0ed7a602c727a') in 1.240283 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.782891 seconds.
+  path: Assets/UnityShadersBook/Chapter10/ReflectionCubemap.cubemap
+  artifactKey: Guid(a8b3e37e26c06b541a42715da0368101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/ReflectionCubemap.cubemap using Guid(a8b3e37e26c06b541a42715da0368101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6af89afa1ac1234d19bc8544958b5cec') in 1.226304 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.838174 seconds.
+  path: Assets/UnityShadersBook/Chapter10/Refraction.unity
+  artifactKey: Guid(6d9f49baa46b6b2419050f6623355698) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/Refraction.unity using Guid(6d9f49baa46b6b2419050f6623355698) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e52dff048764edca7572034b7bc7be01') in 0.001673 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.061812 seconds.
+  path: Assets/UnityShadersBook/Chapter10/Schlick.unity
+  artifactKey: Guid(e95a7a0ae115192448b811f6da3703e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/Schlick.unity using Guid(e95a7a0ae115192448b811f6da3703e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e754a7dda7de62857bda1be6faaebec') in 0.001479 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.246982 seconds.
+  path: Assets/UnityShadersBook/Chapter10/Schlick.unity
+  artifactKey: Guid(e95a7a0ae115192448b811f6da3703e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/Schlick.unity using Guid(e95a7a0ae115192448b811f6da3703e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0929288b631403e5eabc73dffdcd487f') in 0.001377 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.586972 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter10/Cubemaps/posz.jpg
+  artifactKey: Guid(eff4728e8abf64b26ae4f54c09274dc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter10/Cubemaps/posz.jpg using Guid(eff4728e8abf64b26ae4f54c09274dc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '078c83379c7d2f9ae33276bbf99b44a4') in 0.047004 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 124.524335 seconds.
+  path: Assets/UnityShadersBook/Chapter10/Schlick.shader
+  artifactKey: Guid(e12575a251b8743488fdb5dfd1bee4f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/Schlick.shader using Guid(e12575a251b8743488fdb5dfd1bee4f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5e5f7ae0877fce4e1212639e9fe7669') in 0.014920 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8891.533225 seconds.
+  path: Assets/UnityShadersBook/Chapter10/Untitled-1.shader
+  artifactKey: Guid(e1bc41330429ca9418e631fd43fb8f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter10/Untitled-1.shader using Guid(e1bc41330429ca9418e631fd43fb8f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6b1def18fd33ceeb028d424eac35b4b') in 0.030255 seconds 
