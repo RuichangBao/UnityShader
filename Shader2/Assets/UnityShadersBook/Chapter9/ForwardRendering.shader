@@ -14,7 +14,7 @@ Shader "UnityShadersBook/Chapter9/ForwardRendering"
     { 
         Pass//Base Pass
         {
-            Tags {"LightMode"="ForwardBase" }
+            Tags {"LightMode" = "ForwardBase"}
 
             CGPROGRAM
             //需要添加这个声明

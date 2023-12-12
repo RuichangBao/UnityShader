@@ -58,17 +58,18 @@ Shader "UnityShadersBook/Chapter6/SpecularVertexLevel"
                 //_LightColor0环境光
                 //saturate 取[0-1]
                 //dot 返回两个向量的点积
-                fixed3 diffuse = _LightColor0.rgb*_Diffuse.rgb*saturate(dot(worldNormal,worldLightDir));
+                fixed3 diffuse = _LightColor0.rgb*_Diffuse.rgb*saturate(dot(worldNormal, worldLightDir));
                 //高光反射方向
                 //reflect 计算高光反射光方向
-                fixed3 reflectDir = normalize(reflect(-worldLightDir,worldNormal));
+                fixed3 reflectDir = normalize(reflect(-worldLightDir, worldNormal));
                 //获得世界空间中的视角方向
                 //_WorldSpaceCameraPos 世界空间中的摄像机位置
                 //unity_ObjectToWorld 当前模型矩阵。
-                fixed3 viewDir = normalize(_WorldSpaceCameraPos.xyz-mul(unity_ObjectToWorld,v.vertex).xyz);
+                fixed3 worldPos = mul(unity_ObjectToWorld, v.vertex);
+                fixed3 viewDir = normalize(_WorldSpaceCameraPos.xyz - worldPos);
                 //高光反射
                 //cspecular =  (clight · mspecular)max(0,v·r)  mgloss
-                fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(saturate(dot(reflectDir,viewDir)),_Gloss);
+                fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(saturate(dot(reflectDir, viewDir)), _Gloss);
                 o.color = ambient + diffuse + specular;
                 return o;
             }

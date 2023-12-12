@@ -49,7 +49,8 @@ Shader "UnityShadersBook/Chapter10/Schlick"{
                 o.worldViewDir = UnityWorldSpaceViewDir(o.worldPos);
                 //reflect:返回入射光线i对表面法线n的反射光线。
                 //计算世界空间下的反射方向
-                o.worldRefl = reflect(-o.worldViewDir, o.worldNormal); 
+                o.worldRefl = reflect(-o.worldViewDir, o.worldNormal);
+                
                 //o._ShadowCoord = ComputeScreenPos(o.pos);
                 TRANSFER_SHADOW(o);
                 return o;
@@ -64,6 +65,7 @@ Shader "UnityShadersBook/Chapter10/Schlick"{
                 fixed fresnel = _FresnelScale + (1 - _FresnelScale) * pow(1 - dot(worldViewDir, worldNormal), 5); 
                 fixed3 diffuse = _LightColor0.rgb * _Color.rgb * max(0, dot(worldNormal, worldLightDir)); 
                 UNITY_LIGHT_ATTENUATION(attenuation, i, i.worldPos);
+                // UNITY_ATTEN_CHANNEL
                 fixed3 color = ambient + lerp(diffuse, reflection, saturate(fresnel)) * attenuation;
                 return fixed4(color, 1.0);
             }

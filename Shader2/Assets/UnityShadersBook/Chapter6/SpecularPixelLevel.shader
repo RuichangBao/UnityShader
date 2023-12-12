@@ -50,7 +50,7 @@ Shader "UnityShadersBook/Chapter6/SpecularPixelLevel"
                 // o.worldNormal = mul(v.normal,(float3x3)_World2Object);
                 o.worldNormal = mul(v.normal,(float3x3)unity_WorldToObject);
                 // o.worldPos = mul(_Object2World,v.vertex).xyz;
-                o.worldPos = mul(unity_ObjectToWorld,v.vertex).xyz;
+                o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
                 return o;
             }
 
@@ -65,14 +65,14 @@ Shader "UnityShadersBook/Chapter6/SpecularPixelLevel"
 
                 //_LightColor0.rgb 光源颜色
                 //漫反射
-                fixed3 diffuse = _LightColor0.rgb*_Diffuse.rgb*saturate(dot(worldNormal,worldLightDir));
+                fixed3 diffuse = _LightColor0.rgb*_Diffuse.rgb * saturate(dot(worldNormal, worldLightDir));
 
                 //高光反射部分
                 //得到高光反射方向
-                fixed3 reflectDir = normalize(reflect(-worldLightDir,worldNormal));
+                fixed3 reflectDir = normalize(reflect(-worldLightDir, worldNormal));
                 //高光反射视角方向
-                fixed3 viewDir = normalize(_WorldSpaceCameraPos.xyz-i.worldPos.xyz);
-                fixed3 specular = _LightColor0.rgb*_Specular.rgb*pow(saturate(dot(reflectDir,viewDir)),_Gloss);
+                fixed3 viewDir = normalize(_WorldSpaceCameraPos.xyz - i.worldPos.xyz);
+                fixed3 specular = _LightColor0.rgb*_Specular.rgb*pow(saturate(dot(reflectDir, viewDir)),_Gloss);
                 return fixed4(ambient + diffuse + specular,1);
             }
             ENDCG

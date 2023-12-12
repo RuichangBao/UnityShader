@@ -1,5 +1,4 @@
-﻿
-//半兰伯特光照
+﻿//半兰伯特光照
 Shader "UnityShadersBook/Chapter6/HalfLambert"
 {
     Properties
@@ -36,9 +35,9 @@ Shader "UnityShadersBook/Chapter6/HalfLambert"
             {
                 v2f o;
                 // o.pos = mul(UNITY_MATRIX_MVP,v.vertex);
-                float4 vPos = mul(UNITY_MATRIX_MV,v.vertex);
-                o.pos = mul(UNITY_MATRIX_P,vPos);
-                // o.pos = UnityObjectToClipPos(v.vertex);
+                // float4 vPos = mul(UNITY_MATRIX_MV,v.vertex);
+                // o.pos = mul(UNITY_MATRIX_P, vPos);
+                o.pos = UnityObjectToClipPos(v.vertex);
 
                 //o.worldNormal = mul(v.normal,(float3x3)_World2Object);
                 //mul 矩阵和向量或者向量和矩阵的相乘
