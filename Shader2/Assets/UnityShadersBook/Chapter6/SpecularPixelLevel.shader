@@ -65,7 +65,7 @@ Shader "UnityShadersBook/Chapter6/SpecularPixelLevel"
 
                 //_LightColor0.rgb 光源颜色
                 //漫反射
-                fixed3 diffuse = _LightColor0.rgb*_Diffuse.rgb * saturate(dot(worldNormal, worldLightDir));
+                fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * saturate(dot(worldNormal, worldLightDir));
 
                 //高光反射部分
                 //得到高光反射方向
