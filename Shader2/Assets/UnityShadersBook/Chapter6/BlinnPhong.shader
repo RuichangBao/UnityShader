@@ -62,15 +62,15 @@ Shader "UnityShadersBook/Chapter6/BlinnPhong"
 
                 //_LightColor0.rgb 光源颜色
                 //漫反射
-                fixed3 diffuse = _LightColor0.rgb*_Diffuse.rgb*saturate(dot(worldNormal,worldLightDir));
+                fixed3 diffuse = _LightColor0.rgb*_Diffuse.rgb*saturate(dot(worldNormal, worldLightDir));
 
                 //高光反射部分
                 //得到高光反射方向
-                fixed3 reflectDir = normalize(reflect(-worldLightDir,worldNormal));
+                fixed3 reflectDir = normalize(reflect(-worldLightDir, worldNormal));
                 //高光反射视角方向
-                fixed3 viewDir = normalize(_WorldSpaceCameraPos.xyz-i.worldPos.xyz);
+                fixed3 viewDir = normalize(_WorldSpaceCameraPos.xyz - i.worldPos.xyz);
                 //得到世界空间的一半方向
-                fixed3 halfDir = normalize(worldLightDir+viewDir);
+                fixed3 halfDir = normalize(worldLightDir + viewDir);
                 //高光反射
                 fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(max(0,dot(worldNormal, halfDir)),_Gloss);
                 return fixed4(ambient + diffuse + specular,1);

@@ -48,7 +48,6 @@ Shader "UnityShadersBook/Chapter6/SpecularVertexLevel"
                 fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
                 //法线转换
                 //fixed3 worldNormal = normalize(mul(v.normal,(float3x3)_World2Object));
-                //mul 矩阵和向量或者向量和矩阵的相乘
                 //unity_WorldToObject 当前世界矩阵的逆矩阵。
                 //模型空间的法线转换成世界空间下的法线
                 fixed3 worldNormal = normalize(mul(v.normal,(float3x3)unity_WorldToObject));

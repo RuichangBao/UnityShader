@@ -1,22 +1,20 @@
 ﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
-// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
 //反射
 Shader "UnityShadersBook/Chapter10/Reflection"
 {
     Properties
     {
-        _Color("颜色", Color)=(1,1,1,1)
-        _ReflectColor("反射颜色", Color)=(1,1,1,1)
-        _ReflectAmount("反射量", Range(0,1))=1
-        _Cubemap("Reflection Cubemap", Cube)="_Skybox"{}//反射纹理
+        [HDR]_Color("漫反射颜色", Color) = (1,1,1,1)
+        [HDR]_ReflectColor("纹理反射颜色", Color) = (1,1,1,1)
+        _ReflectAmount("纹理反射反射量", Range(0,1)) = 1
+        _Cubemap("Reflection Cubemap", Cube) = "_Skybox"{}//反射纹理
     }
     SubShader
     {
         //RenderType:shader 分类,Opaque:用于大多数着色器（法线着色器、自发光着色器、反射着色器以及地形的着色器）。
         //Queue: 控制渲染顺序,渲染队列，Geometry：	指定几何体渲染队列
-        Tags { "RenderType"="Opaque" "Queue"="Geometry"}
+        Tags { "RenderType" = "Opaque" "Queue" = "Geometry"}
 
         Pass
         {
@@ -42,7 +40,7 @@ Shader "UnityShadersBook/Chapter10/Reflection"
                 float3 worldPos : TEXCOORD0;
                 float3 worldNormal : TEXCOORD1;
                 float3 worldViewDir : TEXCOORD2;
-                float3 worldRefl : TEXCOORD3;
+                float3 worldRefl : TEXCOORD3;//反射反向
 
                 // #define SHADOW_COORDS(idx1) unityShadowCoord4 _ShadowCoord : TEXCOORD##idx1;
                 // float4 _ShadowCoord : TEXCOORD4;
@@ -57,7 +55,7 @@ Shader "UnityShadersBook/Chapter10/Reflection"
                 //世界空间法线
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
                 //世界空间坐标
-                o.worldPos = mul(unity_ObjectToWorld,v.vertex).xyz;
+                o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
                 //世界空间观察方向
                 o.worldViewDir = UnityWorldSpaceViewDir(o.worldPos);
                 //reflect:返回入射光线i对表面法线n的反射光线。
