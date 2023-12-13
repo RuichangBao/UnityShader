@@ -1093,3 +1093,393 @@ Received Import Request.
   path: Assets/UnityShadersBook/Chapter9/Scene_9_4_2.unity
   artifactKey: Guid(709c04e1bb7550f4dad32ee8996bacf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/UnityShadersBook/Chapter9/Scene_9_4_2.unity using Guid(709c04e1bb7550f4dad32ee8996bacf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '094f827ac274cac5ff27747dee31f096') in 0.001599 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 606.243301 seconds.
+  path: Assets/UnityShadersBook/Chapter9/Shadow 1.unity
+  artifactKey: Guid(2f0ac18a1329a194bb67a1f51d575117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/Shadow 1.unity using Guid(2f0ac18a1329a194bb67a1f51d575117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b167963aae84c69a977806f9678b205') in 0.024490 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.076244 seconds.
+  path: Assets/UnityShadersBook/Chapter9/Scene_9_4_2.unity
+  artifactKey: Guid(2f0ac18a1329a194bb67a1f51d575117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/Scene_9_4_2.unity using Guid(2f0ac18a1329a194bb67a1f51d575117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bea2b344f4d10457e1b09e89e21a14e6') in 0.001319 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.059861 seconds.
+  path: Assets/UnityShadersBook/Chapter9/Shadow.shader
+  artifactKey: Guid(f27484334011a5f488e6874bae2e21bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/Shadow.shader using Guid(f27484334011a5f488e6874bae2e21bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '179ddb962bc0f7573f4d3ef6f334ad91') in 0.049521 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 113.675158 seconds.
+  path: Assets/UnityShadersBook/Chapter9/ForwardRendering.shader
+  artifactKey: Guid(a7b598c17055d694f927ab6afd55887c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/ForwardRendering.shader using Guid(a7b598c17055d694f927ab6afd55887c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4845866bdf54bc410ca52cf4930b3e84') in 0.001886 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.344837 seconds.
+  path: Assets/UnityShadersBook/Chapter9/ForwardRendering.shader
+  artifactKey: Guid(a7b598c17055d694f927ab6afd55887c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/ForwardRendering.shader using Guid(a7b598c17055d694f927ab6afd55887c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6a29a3e3477b1bacbd8d3228b5951cc') in 0.002051 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 381.301711 seconds.
+  path: Assets/UnityShadersBook/Chapter9/NewUnlitShader.shader
+  artifactKey: Guid(a3fb5a8d76e76af47b665f2d6b5b9cdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/NewUnlitShader.shader using Guid(a3fb5a8d76e76af47b665f2d6b5b9cdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aed4168bedd22b93313cc1e6679cfe58') in 0.046360 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.377796 seconds.
+  path: Assets/UnityShadersBook/Chapter9/NewImageEffectShader.shader
+  artifactKey: Guid(0b3fef81bd3e70141bc145d2e60de6af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/NewImageEffectShader.shader using Guid(0b3fef81bd3e70141bc145d2e60de6af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06dd29d3bd7f7f39c89c0bac584694b6') in 0.041371 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.381664 seconds.
+  path: Assets/UnityShadersBook/Chapter9/NewRayTracingShader.raytrace
+  artifactKey: Guid(0a54897982d51b04cb76437a16b20bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/NewRayTracingShader.raytrace using Guid(0a54897982d51b04cb76437a16b20bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb9e60186b53b3470f33166477fbe963') in 0.005986 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.013952 seconds.
+  path: Assets/UnityShadersBook/Chapter9/Scene_9_4_2.unity
+  artifactKey: Guid(2f0ac18a1329a194bb67a1f51d575117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/Scene_9_4_2.unity using Guid(2f0ac18a1329a194bb67a1f51d575117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '130f4a7463050fa0eb2cd934f84492aa') in 0.001561 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.236441 seconds.
+  path: Assets/UnityShadersBook/Chapter9/NewComputeShader.compute
+  artifactKey: Guid(a44e6edb5d2b1e54eb7db3da60f37bbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/NewComputeShader.compute using Guid(a44e6edb5d2b1e54eb7db3da60f37bbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '861d3f61e345e129621fdbd419127a27') in 0.004655 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 58560.257986 seconds.
+  path: Assets/UnityShadersBook/Chapter9/ForwardRendering.shader
+  artifactKey: Guid(a7b598c17055d694f927ab6afd55887c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/ForwardRendering.shader using Guid(a7b598c17055d694f927ab6afd55887c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a131cb39fa7b7dbc0afc6f06674a953b') in 0.010380 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 123.862122 seconds.
+  path: Assets/UnityShadersBook/Chapter9/Scene_9_4_2.unity
+  artifactKey: Guid(2f0ac18a1329a194bb67a1f51d575117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/Scene_9_4_2.unity using Guid(2f0ac18a1329a194bb67a1f51d575117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25a6fb851d02e43ad488357cc13f060e') in 0.001967 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.973869 seconds.
+  path: Assets/UnityShadersBook/Chapter9/Shadow.shader
+  artifactKey: Guid(f27484334011a5f488e6874bae2e21bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/Shadow.shader using Guid(f27484334011a5f488e6874bae2e21bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d8d4854ba33598c5c051cc593ced948') in 0.002188 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 868.968073 seconds.
+  path: Assets/UnityShadersBook/Chapter9/Shadow.shader
+  artifactKey: Guid(f27484334011a5f488e6874bae2e21bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/Shadow.shader using Guid(f27484334011a5f488e6874bae2e21bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2281b4e5920cf74066db5b6bdcd47c1') in 0.002923 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 39.074074 seconds.
+  path: Assets/UnityShadersBook/Chapter9/Shadow.shader
+  artifactKey: Guid(f27484334011a5f488e6874bae2e21bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/Shadow.shader using Guid(f27484334011a5f488e6874bae2e21bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '922fe2a02df08acd52b7df60df1865e0') in 0.003094 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2015.234644 seconds.
+  path: Assets/UnityShadersBook/Chapter9/AttenuationAndShadowUseBuildInFunctions.shader
+  artifactKey: Guid(52df9df1794fc2e479f449de49a7aa07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/AttenuationAndShadowUseBuildInFunctions.shader using Guid(52df9df1794fc2e479f449de49a7aa07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18a338e0cb46b34ca5c0ad5cf90e4a0a') in 0.011955 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1277.353773 seconds.
+  path: Assets/UnityShadersBook/Chapter9/AttenuationAndShadowUseBuildInFunctions.shader
+  artifactKey: Guid(52df9df1794fc2e479f449de49a7aa07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/AttenuationAndShadowUseBuildInFunctions.shader using Guid(52df9df1794fc2e479f449de49a7aa07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10c36dbcb9ed483ca94fa73490e88e1d') in 0.002134 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 921.230324 seconds.
+  path: Assets/UnityShadersBook/Chapter9/Shadow.shader
+  artifactKey: Guid(f27484334011a5f488e6874bae2e21bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/Shadow.shader using Guid(f27484334011a5f488e6874bae2e21bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80b5a7999dfee180068aed8e86a4afb0') in 0.002584 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 57.222929 seconds.
+  path: Assets/UnityShadersBook/Chapter9/Shadow.shader
+  artifactKey: Guid(f27484334011a5f488e6874bae2e21bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/Shadow.shader using Guid(f27484334011a5f488e6874bae2e21bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '747d50963e66053643e99975fdf5c4c3') in 0.002288 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 604.027562 seconds.
+  path: Assets/UnityShadersBook/Chapter9/AttenuationAndShadowUseBuildInFunctions 1.unity
+  artifactKey: Guid(3d764fb0ad5d0fb4dbc982bca134e3c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/AttenuationAndShadowUseBuildInFunctions 1.unity using Guid(3d764fb0ad5d0fb4dbc982bca134e3c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '795af845b9bfd897e5ea96728e7a5cad') in 0.026669 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.576069 seconds.
+  path: Assets/UnityShadersBook/Chapter9/AlphaTestWithShadow.unity
+  artifactKey: Guid(3d764fb0ad5d0fb4dbc982bca134e3c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/AlphaTestWithShadow.unity using Guid(3d764fb0ad5d0fb4dbc982bca134e3c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '905d906cb0a528f923a7509f4d861407') in 0.087330 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.039460 seconds.
+  path: Assets/UnityShadersBook/Chapter9/AttenuationAndShadowUseBuildInFunctions.shader
+  artifactKey: Guid(52df9df1794fc2e479f449de49a7aa07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/AttenuationAndShadowUseBuildInFunctions.shader using Guid(52df9df1794fc2e479f449de49a7aa07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2710d9cf2d4e4aa0e99f6470b439ebc3') in 0.002653 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.480205 seconds.
+  path: Assets/UnityShadersBook/Chapter9/AttenuationAndShadowUseBuildInFunctions 1.shader
+  artifactKey: Guid(2bc1edcd84cc0734698b2d409687a90e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/AttenuationAndShadowUseBuildInFunctions 1.shader using Guid(2bc1edcd84cc0734698b2d409687a90e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a5bb2ca2c475b0d62efea193821e620') in 0.036863 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.196945 seconds.
+  path: Assets/UnityShadersBook/Chapter9/AlphaTestWithShadow.shader
+  artifactKey: Guid(2bc1edcd84cc0734698b2d409687a90e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/AlphaTestWithShadow.shader using Guid(2bc1edcd84cc0734698b2d409687a90e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '328ffb80563d8251dc1d04d7f9f25ebf') in 0.003287 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.826045 seconds.
+  path: Assets/UnityShadersBook/Chapter9/AlphaTestWithShadow.shader
+  artifactKey: Guid(2bc1edcd84cc0734698b2d409687a90e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter9/AlphaTestWithShadow.shader using Guid(2bc1edcd84cc0734698b2d409687a90e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90c11211f762cf29a9796e977b6504e7') in 0.004361 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 49.481030 seconds.
+  path: Assets/UnityShadersBook/Chapter8/AlphaTest.shader
+  artifactKey: Guid(d951d2eec42c3f24a8aa2a2f94517743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter8/AlphaTest.shader using Guid(d951d2eec42c3f24a8aa2a2f94517743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f893e63060b1958dd72116ffabe31f7e') in 0.002113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.738395 seconds.
+  path: Assets/UnityShadersBook/Chapter8/AlphaTestBothSided.shader
+  artifactKey: Guid(41e65b0e3e0895848974e4bef37c42be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Chapter8/AlphaTestBothSided.shader using Guid(41e65b0e3e0895848974e4bef37c42be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b17ce8f1cf85686895e7f100b8b8c224') in 0.022794 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 59.146913 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_barrel_01_a.tif
+  artifactKey: Guid(331a012fdbf7f934796cdbc74ae62fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_barrel_01_a.tif using Guid(331a012fdbf7f934796cdbc74ae62fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ec5f5fc9d46e7b30814bda88b242315') in 0.205059 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_barrel_01_n.tif
+  artifactKey: Guid(b6a29449e2334634888aead1338831fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_barrel_01_n.tif using Guid(b6a29449e2334634888aead1338831fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63decf06ea595ad4271a7c8755876240') in 0.049422 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_barrel_01_m.tif
+  artifactKey: Guid(e4bc5f5561c22f74d865e9e3aa8ccf78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_barrel_01_m.tif using Guid(e4bc5f5561c22f74d865e9e3aa8ccf78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27cfb18f6b8dd0914194f5ba8845736a') in 0.046879 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_barrel_01_o.tif
+  artifactKey: Guid(f411e92f84107f740a97019594c0a0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_barrel_01_o.tif using Guid(f411e92f84107f740a97019594c0a0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34a98d7cd3f75d5948019291b163f3d9') in 0.103974 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_shield_01_d.tif
+  artifactKey: Guid(a7dc626610cc07e4b9fabfd101979ada) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_shield_01_d.tif using Guid(a7dc626610cc07e4b9fabfd101979ada) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfb1a73704a0368f30f2d4b19064b41f') in 0.155874 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_shield_01_n.tif
+  artifactKey: Guid(9a3694bfb38f09648a7248d8e6160605) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_shield_01_n.tif using Guid(9a3694bfb38f09648a7248d8e6160605) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c850d4a591f262a5273b77c21ef022b') in 0.103672 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_shield_03_o.tif
+  artifactKey: Guid(eb58d99782a645c478337012addb8c5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_shield_03_o.tif using Guid(eb58d99782a645c478337012addb8c5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c7c464d52c3ece5ab295bfce6183e90') in 0.037485 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_shield_01_sg.tif
+  artifactKey: Guid(882293f5fee5223478ea927675112fdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_shield_01_sg.tif using Guid(882293f5fee5223478ea927675112fdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac3bce8adbc3b5d5d653203cda31cfb4') in 0.097577 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_sword_shovel_halberd_01_n.tif
+  artifactKey: Guid(8e8365bdbdf9e3445b36b959d1554222) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_sword_shovel_halberd_01_n.tif using Guid(8e8365bdbdf9e3445b36b959d1554222) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '026cc6ed6a0b6539e05aeff5c444c83d') in 0.087550 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_shield_03_sg.tif
+  artifactKey: Guid(4a8c07b1687ddfd4ab749f9ad1dbffd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_shield_03_sg.tif using Guid(4a8c07b1687ddfd4ab749f9ad1dbffd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e389a2ee0bf725d73da70529beb85db') in 0.093058 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_shield_03_n.tif
+  artifactKey: Guid(825df6faf48d2414aa8b126b10e28956) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_shield_03_n.tif using Guid(825df6faf48d2414aa8b126b10e28956) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6b0a69ad4844af54e26a9ad9ee276f8') in 0.088387 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_shield_03_a.tif
+  artifactKey: Guid(5a2cdbe262fd7634e83ad27f830d8d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_shield_03_a.tif using Guid(5a2cdbe262fd7634e83ad27f830d8d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eea5c8619fae30b124e90a41fa32bfa3') in 0.112995 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter7/Ramp_Texture2.psd
+  artifactKey: Guid(6e7b096b1db594c26985056637771fef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter7/Ramp_Texture2.psd using Guid(6e7b096b1db594c26985056637771fef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23185e4cadb822c435fb4217d8237d28') in 0.069720 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_sword_shovel_halberd_01_o.tif
+  artifactKey: Guid(aaa298fba92280b41a1a986f0c8acd7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_sword_shovel_halberd_01_o.tif using Guid(aaa298fba92280b41a1a986f0c8acd7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f769176991751c7dc949a001d2917628') in 0.156166 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_sword_shovel_halberd_01_sg.tif
+  artifactKey: Guid(2aaaeb66f8f208f45b71648bb8130029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_sword_shovel_halberd_01_sg.tif using Guid(2aaaeb66f8f208f45b71648bb8130029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a1dda9af7dda33ef080b729f9701fd3') in 0.169771 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter7/Ramp_Texture0.psd
+  artifactKey: Guid(f628a9d765d21417995f27cbf8e44c2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter7/Ramp_Texture0.psd using Guid(f628a9d765d21417995f27cbf8e44c2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17a4444d0877082e3fbaa2d57984c9b6') in 0.120885 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_grass_01_a.tif
+  artifactKey: Guid(58089fc2b5b754fdfa1ba1e10b602c16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_grass_01_a.tif using Guid(58089fc2b5b754fdfa1ba1e10b602c16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a349b08ac086f2ffb624d1d4b6e677e5') in 0.125775 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_mudslide_01_n.tif
+  artifactKey: Guid(7cd0eb279f76f4fe2b6598b8d63db012) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_mudslide_01_n.tif using Guid(7cd0eb279f76f4fe2b6598b8d63db012) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '758ef8e0300aff68540d5be6bbe77897') in 0.129150 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_mudslide_01_sg.tif
+  artifactKey: Guid(59c223bf0356b4ffe99eb7ebf8e079e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_mudslide_01_sg.tif using Guid(59c223bf0356b4ffe99eb7ebf8e079e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '196842571f74251c96f2aa4cc6cb8789') in 0.204267 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_grass_01_sg.tif
+  artifactKey: Guid(597382859cb8f4ae2aef855d09ffb2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_grass_01_sg.tif using Guid(597382859cb8f4ae2aef855d09ffb2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0cd3b56bd0a26fb00912bb8ee636f50') in 0.122243 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_grass_01_n.tif
+  artifactKey: Guid(537b8aee1e26f4d6597e0bf556299f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_grass_01_n.tif using Guid(537b8aee1e26f4d6597e0bf556299f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fb46f875795d70e1cd79e4b313b5f85') in 0.106660 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_barrel_01_sg.tif
+  artifactKey: Guid(2be69b1584d71e048a393fff2ef0a80d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_barrel_01_sg.tif using Guid(2be69b1584d71e048a393fff2ef0a80d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '063aa0ffef22e5cd98da9bcfb65f098d') in 0.048259 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_wetmud_01_a.tif
+  artifactKey: Guid(72ba680cc909949c78530fe30a93327c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_wetmud_01_a.tif using Guid(72ba680cc909949c78530fe30a93327c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b021235800265da27c3fc5aa3acccfb') in 0.077503 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_fence_02_n.tif
+  artifactKey: Guid(f56e8c73d755f2347b44412fc6ad9b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_fence_02_n.tif using Guid(f56e8c73d755f2347b44412fc6ad9b0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e302c57362dc09b4d70e409491858162') in 0.068372 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_wetmud_01_n.tif
+  artifactKey: Guid(201c3610165f141cf9bd98b7d27e32eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_wetmud_01_n.tif using Guid(201c3610165f141cf9bd98b7d27e32eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '901e9a108cee07d00021afbfbb772182') in 0.133434 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Packages/com.unity.purchasing/Icons/UnityEngine.Purchasing.IAPButtonIcon.png
+  artifactKey: Guid(55e457740fe60405dac77af143e1a867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.purchasing/Icons/UnityEngine.Purchasing.IAPButtonIcon.png using Guid(55e457740fe60405dac77af143e1a867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de42c3cabd715c1adaa724a592e596e3') in 0.141417 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Other/Art/Texture/ui_voting_bg_05.png
+  artifactKey: Guid(c25d0f05e73116d498ae54680c15c26c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Other/Art/Texture/ui_voting_bg_05.png using Guid(c25d0f05e73116d498ae54680c15c26c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96a615d3cb9912a62ce0af2c9be78fe2') in 0.126965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter7/Road_Normal.tga
+  artifactKey: Guid(fb7364a89ab4a114a89a472f8a4c189e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter7/Road_Normal.tga using Guid(fb7364a89ab4a114a89a472f8a4c189e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93ef25bb6f948b19e2d519ec2ac62084') in 0.092046 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter7/Road_Diffuse.tga
+  artifactKey: Guid(987c676a3fac2524b871781701f8fbb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter7/Road_Diffuse.tga using Guid(987c676a3fac2524b871781701f8fbb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db7d7016e25b626859619a4bd90ec2e5') in 0.027380 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_fence_02_o.tif
+  artifactKey: Guid(8cba82c5350f91d46ad8e6539ff3c81f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_fence_02_o.tif using Guid(8cba82c5350f91d46ad8e6539ff3c81f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1610814bd8c16515e688c7d4f0a23b6e') in 0.080237 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_shield_02_o.tif
+  artifactKey: Guid(a5ac9e4101e9a1845b1f44ac8118bb24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_shield_02_o.tif using Guid(a5ac9e4101e9a1845b1f44ac8118bb24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '656e9f7f211a96a24e3e057375a504c0') in 0.096080 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/UnityShadersBook/Textures/Objects/Sphere_Diffuse.JPG
+  artifactKey: Guid(7449f5cbb271545ae8c01f31a15d1182) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Objects/Sphere_Diffuse.JPG using Guid(7449f5cbb271545ae8c01f31a15d1182) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2990612d99a0aafee1662300be24f775') in 0.104040 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_mudslide_01_a.tif
+  artifactKey: Guid(e7afc4e5fd0d3425f90e9e36b4012633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_mudslide_01_a.tif using Guid(e7afc4e5fd0d3425f90e9e36b4012633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd63dc1d1517ddd243cb0f6a5874bd21f') in 0.061771 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter11/star.png
+  artifactKey: Guid(d663cbf1769164424a7149b62663a465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter11/star.png using Guid(d663cbf1769164424a7149b62663a465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc1ddf94cab7f851ab435c131e21babe') in 0.041720 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_sword_shovel_halberd_01_d.tif
+  artifactKey: Guid(3f168a0ff902ac649892b6e734c3d6e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_sword_shovel_halberd_01_d.tif using Guid(3f168a0ff902ac649892b6e734c3d6e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c836d7b57371a73ce9deecca0a6fe6c2') in 0.067503 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter7/Ramp_Texture1.psd
+  artifactKey: Guid(7a260a1cdf6d24bc59ee55122079d2fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter7/Ramp_Texture1.psd using Guid(7a260a1cdf6d24bc59ee55122079d2fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80435c3715b8118652ada983346f5139') in 0.026379 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_fence_02_a.tif
+  artifactKey: Guid(518249a30c8ae754ba6ace7438dae717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/prop_fence_02_a.tif using Guid(518249a30c8ae754ba6ace7438dae717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81ae12cdf785ddb991e4f4ae4fa79ff2') in 0.018392 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_wetmud_01_sg.tif
+  artifactKey: Guid(dc4b78174bb4f41e5bea9fb1d63a2f6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnityShadersBook/Textures/Chapter18/PBS/terrain_wetmud_01_sg.tif using Guid(dc4b78174bb4f41e5bea9fb1d63a2f6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d88e38659dc50beb207ad061e06eb94') in 0.056199 seconds 
