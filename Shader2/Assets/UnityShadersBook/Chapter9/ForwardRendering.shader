@@ -4,11 +4,11 @@ Shader "UnityShadersBook/Chapter9/ForwardRendering"
     Properties
     {
         //漫反射颜色
-        _Diffuse ("Diffuse", Color) = (1,1,1,1)
+        [HDR]_Diffuse ("Diffuse", Color) = (1,1,1,1)
         //高光反射颜色
-        _Specular("Specular  高光反射",Color) = (1,1,1,1)
+        [HDR]_Specular("Specular  高光反射",Color) = (1,1,1,1)
         //光泽度
-        _Gloss("Gloss 光泽度",Range(8,256)) = 20
+        _Gloss("Gloss 光泽度",Range(8, 256)) = 20
     }
     SubShader
     { 

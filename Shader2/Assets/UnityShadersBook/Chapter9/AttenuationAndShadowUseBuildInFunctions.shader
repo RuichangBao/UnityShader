@@ -1,11 +1,11 @@
 Shader "UnityShadersBook/Chapter9/AttenuationAndShadowUseBuildInFunctions"
 {
-   Properties
+    Properties
     {
         //漫反射颜色
-        _Diffuse ("Diffuse", Color) = (1,1,1,1)
+        [HDR]_Diffuse ("Diffuse", Color) = (1,1,1,1)
         //高光反射颜色
-        _Specular("Specular  高光反射",Color) = (1,1,1,1)
+        [HDR]_Specular("Specular  高光反射",Color) = (1,1,1,1)
         //光泽度
         _Gloss("Gloss 光泽度",Range(8, 256)) = 20
     }
@@ -171,32 +171,32 @@ Shader "UnityShadersBook/Chapter9/AttenuationAndShadowUseBuildInFunctions"
         //没有这个pass会在Fallback中找到LightMode为ShadowCaster的pass
         // Pass
         // {
-        //     Name "ShadowCaster"
-        //     Tags { "LightMode" = "ShadowCaster" }
-        //     Blend One One //混合模式
-        //     CGPROGRAM
-        //     #pragma vertex vert
-        //     #pragma fragment frag
-        //     #pragma multi_compile_fwdadd
-        //     #include "UnityCG.cginc"
+            //     Name "ShadowCaster"
+            //     Tags { "LightMode" = "ShadowCaster" }
+            //     Blend One One //混合模式
+            //     CGPROGRAM
+            //     #pragma vertex vert
+            //     #pragma fragment frag
+            //     #pragma multi_compile_fwdadd
+            //     #include "UnityCG.cginc"
 
-        //     struct v2f
-        //     {
-        //         V2F_SHADOW_CASTER;
-        //     };
+            //     struct v2f
+            //     {
+                //         V2F_SHADOW_CASTER;
+            //     };
 
-        //     v2f vert (appdata_base v)
-        //     {
-        //         v2f o;
-        //         TRANSFER_SHADOW_CASTER_NORMALOFFSET(o)
-        //         return o;
-        //     }
+            //     v2f vert (appdata_base v)
+            //     {
+                //         v2f o;
+                //         TRANSFER_SHADOW_CASTER_NORMALOFFSET(o)
+                //         return o;
+            //     }
 
-        //     fixed4 frag (v2f i) : SV_Target
-        //     {
-        //         SHADOW_CASTER_FRAGMENT(i)
-        //     }
-        //     ENDCG
+            //     fixed4 frag (v2f i) : SV_Target
+            //     {
+                //         SHADOW_CASTER_FRAGMENT(i)
+            //     }
+            //     ENDCG
         // }
     } 
     Fallback "Specular"
