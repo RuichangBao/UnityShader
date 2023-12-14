@@ -29,7 +29,7 @@ Shader "UnityShadersBook/Chapter10/Refraction"
             fixed4 _Color;
             fixed4 _RefractColor;
             float _RefractAmount;
-            fixed _RefractRatio;
+            fixed _RefractRatio;//折射比
             samplerCUBE _Cubemap;
             
             struct a2v {
@@ -48,19 +48,18 @@ Shader "UnityShadersBook/Chapter10/Refraction"
             
             v2f vert(a2v v) {
                 v2f o;
+                //裁剪坐标
                 o.pos = UnityObjectToClipPos(v.vertex);
-                
+                //世界空间下的法线
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
-                
+                //世界空间下的位置
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
-                
+                //世界空间下的视角方向
                 o.worldViewDir = UnityWorldSpaceViewDir(o.worldPos);
-                
                 // 计算世界空间下的折射方向
                 o.worldRefr = refract(-normalize(o.worldViewDir), normalize(o.worldNormal), _RefractRatio);
                 
                 TRANSFER_SHADOW(o);
-                
                 return o;
             }
             

@@ -1538,3 +1538,45 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 12408.274349 seconds.
+  path: Assets/Test/Test1.unity
+  artifactKey: Guid(9b9e6385749255342b31703a9aa9352b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Test/Test1.unity using Guid(9b9e6385749255342b31703a9aa9352b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68c552173634a3422ba098e952038720') in 0.090114 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.730707 seconds.
+  path: Assets/Test/Test1.shader
+  artifactKey: Guid(c6563fdcbead263439c25a14881e9760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Test/Test1.shader using Guid(c6563fdcbead263439c25a14881e9760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a368dacbcfd3a679b77b704a1a012e41') in 0.133196 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 70.198916 seconds.
+  path: Assets/Test/Test1.shader
+  artifactKey: Guid(c6563fdcbead263439c25a14881e9760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Test/Test1.shader using Guid(c6563fdcbead263439c25a14881e9760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b067fb9156ce2b39d1769476147aaf63') in 0.003099 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 88.382676 seconds.
+  path: Assets/Test/Test1.shader
+  artifactKey: Guid(c6563fdcbead263439c25a14881e9760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Test/Test1.shader using Guid(c6563fdcbead263439c25a14881e9760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '009532e37065f988d706e4544adc1416') in 0.025226 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.128457 seconds.
+  path: Assets/Test/Test1.shader
+  artifactKey: Guid(c6563fdcbead263439c25a14881e9760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Test/Test1.shader using Guid(c6563fdcbead263439c25a14881e9760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '564fa40d816d8d03bb1a48cc944c2ec5') in 0.002637 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4594.269874 seconds.
+  path: Assets/Test/Test1.shader
+  artifactKey: Guid(c6563fdcbead263439c25a14881e9760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Test/Test1.shader using Guid(c6563fdcbead263439c25a14881e9760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e45650130f090f6b9896dd38d8cd2fde') in 0.013443 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.126009 seconds.
+  path: Assets/Test/Test3.shader
+  artifactKey: Guid(d377e2ba0496b3949b09b47e5bb6361c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Test/Test3.shader using Guid(d377e2ba0496b3949b09b47e5bb6361c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b96d642dcc27235e5e81c583c25b41f5') in 0.002313 seconds 

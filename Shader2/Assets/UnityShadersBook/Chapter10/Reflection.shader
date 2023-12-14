@@ -56,7 +56,7 @@ Shader "UnityShadersBook/Chapter10/Reflection"
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
                 //世界空间坐标
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
-                //世界空间观察方向
+                //世界空间观察方向(视角方向)
                 o.worldViewDir = UnityWorldSpaceViewDir(o.worldPos);
                 //reflect:返回入射光线i对表面法线n的反射光线。
                 //计算世界空间下的反射方向
