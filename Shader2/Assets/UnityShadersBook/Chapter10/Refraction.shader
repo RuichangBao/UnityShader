@@ -67,17 +67,15 @@ Shader "UnityShadersBook/Chapter10/Refraction"
                 fixed3 worldNormal = normalize(i.worldNormal);
                 fixed3 worldLightDir = normalize(UnityWorldSpaceLightDir(i.worldPos));
                 fixed3 worldViewDir = normalize(i.worldViewDir);
-                
                 fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
-                
                 fixed3 diffuse = _LightColor0.rgb * _Color.rgb * max(0, dot(worldNormal, worldLightDir));
                 
-                // Use the refract dir in world space to access the cubemap
+                //使用世界空间下的折射方向来访问立方体纹理
                 fixed3 refraction = texCUBE(_Cubemap, i.worldRefr).rgb * _RefractColor.rgb;
                 
                 UNITY_LIGHT_ATTENUATION(atten, i, i.worldPos);
                 
-                // Mix the diffuse color with the refract color
+                // 将漫反射颜色和折射颜色混合
                 fixed3 color = ambient + lerp(diffuse, refraction, _RefractAmount) * atten;
                 
                 return fixed4(color, 1.0);
