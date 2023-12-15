@@ -60,19 +60,14 @@ Shader"UnityShadersBook/Chapter10/Fresnel"
                 fixed3 worldNormal = normalize(i.worldNormal);
 				fixed3 worldLightDir = normalize(UnityWorldSpaceLightDir(i.worldPos));
 				fixed3 worldViewDir = normalize(i.worldViewDir);
-				
 				fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
-				
+				//计算光照衰减
 				UNITY_LIGHT_ATTENUATION(atten, i, i.worldPos);
-				
 				fixed3 reflection = texCUBE(_Cubemap, i.worldRefl).rgb;
-				
+				//菲涅尔反射
 				fixed fresnel = _FresnelScale + (1 - _FresnelScale) * pow(1 - dot(worldViewDir, worldNormal), 5);
-				
 				fixed3 diffuse = _LightColor0.rgb * _Color.rgb * max(0, dot(worldNormal, worldLightDir));
-				
 				fixed3 color = ambient + lerp(diffuse, reflection, saturate(fresnel)) * atten;
-				
 				return fixed4(color, 1.0);
             }
             ENDCG

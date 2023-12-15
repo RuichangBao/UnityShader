@@ -1,15 +1,17 @@
-﻿Shader "UnityShadersBook/Chapter10/GlassRefraction"
+﻿//玻璃效果
+Shader "UnityShadersBook/Chapter10/GlassRefraction"
 {
     Properties {
-        _MainTex ("材质纹理", 2D) = "white" {}
-        _BumpMap ("法线纹理", 2D) = "bump" {}
-        _Cubemap ("环境纹理", Cube) = "_Skybox" {}
-        _Distortion ("Distortion", Range(0, 100)) = 10//扭曲程度
-        _RefractAmount ("Refract Amount", Range(0.0, 1.0)) = 1.0//折射程度
+        _MainTex ("材质纹理", 2D) = "white" {}  //玻璃的材质纹理
+        _BumpMap ("法线纹理", 2D) = "bump" {}   //玻璃的法线纹理
+        _Cubemap ("环境纹理", Cube) = "_Skybox" {}//反射环境纹理
+        _Distortion ("Distortion", Range(0, 100)) = 10  //折射图像的扭曲程度
+        _RefractAmount ("Refract Amount", Range(0.0, 1.0)) = 1.0//折射程度0:只反射 1:只折射
     }
     SubShader 
     {
         Tags { "RenderType" = "Opaque" "Queue" = "Transparent" }
+        //GrabPass可以获取屏幕图像
         GrabPass { "_RefractionTex" }
         Pass { 
             CGPROGRAM
@@ -24,6 +26,7 @@
             samplerCUBE _Cubemap;
             float _Distortion;
             fixed _RefractAmount;
+            //GrabPass指定的纹理名称
             sampler2D _RefractionTex;
             float4 _RefractionTex_TexelSize;
 
@@ -46,15 +49,18 @@
             v2f vert (a2v v) {
                 v2f o;
                 o.pos = UnityObjectToClipPos(v.vertex);
-                
+                //屏幕坐标
                 o.scrPos = ComputeGrabScreenPos(o.pos);
                 
-                o.uv.xy = TRANSFORM_TEX(v.texcoord, _MainTex);
-                o.uv.zw = TRANSFORM_TEX(v.texcoord, _BumpMap);
+                o.uv.xy = TRANSFORM_TEX(v.texcoord, _MainTex);  //材质纹理
+                o.uv.zw = TRANSFORM_TEX(v.texcoord, _BumpMap);  //法线纹理
                 
-                float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;  
-                fixed3 worldNormal = UnityObjectToWorldNormal(v.normal);  
-                fixed3 worldTangent = UnityObjectToWorldDir(v.tangent.xyz);  
+                float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;   //世界空间下的位置
+                fixed3 worldNormal = UnityObjectToWorldNormal(v.normal);    //世界空间下的法线
+                fixed3 worldTangent = UnityObjectToWorldDir(v.tangent.xyz); //世界空间下的切线
+                //cross:返回两个向量的叉积
+                //cross(worldNormal, worldTangent):副切线
+                //worldBinormal
                 fixed3 worldBinormal = cross(worldNormal, worldTangent) * v.tangent.w; 
                 
                 o.TtoW0 = float4(worldTangent.x, worldBinormal.x, worldNormal.x, worldPos.x);  
@@ -92,3 +98,4 @@
     }
     FallBack "Diffuse"
 }
+//未完待续

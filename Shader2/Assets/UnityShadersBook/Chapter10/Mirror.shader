@@ -1,3 +1,4 @@
+//镜面纹理
 Shader "UnityShadersBook/Chapter10/Mirror"
 {
     Properties
