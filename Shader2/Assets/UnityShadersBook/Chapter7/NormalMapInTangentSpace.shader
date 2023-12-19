@@ -57,9 +57,9 @@ Shader "UnityShadersBook/Chapter7/NormalMapInTangentSpace"
                 o.uv.zw = TRANSFORM_TEX(v.texcoord,_BumpMap);
 
                 //计算副法线 cross：求向量的叉积
-                float3 binormal = cross(normalize(v.normal), normalize(v.tangent.xyz) ) * v.tangent.w;
+                float3 binormal = cross(normalize(v.normal), normalize(v.tangent.xyz)) * v.tangent.w;
                 //切线空间(模型空间到切线空间矩阵)：x 切线方向 y 法线和切线的叉积得到 z 法线方向
-                float3x3 rotation = float3x3( v.tangent.xyz, binormal, v.normal );
+                float3x3 rotation = float3x3(v.tangent.xyz, binormal, v.normal);
                 // TANGENT_SPACE_ROTATION;
                 
                 //将光线方向从模型空间转换为切线空间 ObjSpaceLightDir：求模型空间下某一点的光源方向

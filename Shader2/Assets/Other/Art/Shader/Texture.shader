@@ -20,7 +20,7 @@
 
             struct v2f
             {
-                float4 pos:POSITION;
+                float4 pos:SV_POSITION;
                 float2 uv:TEXCOORD2;
             };
             

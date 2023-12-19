@@ -37,7 +37,7 @@
             {
                 v2f o;
                 o.pos = UnityObjectToClipPos(a.vertex);
-                o.uv = TRANSFORM_TEX(a.texcoord.xy,_MainTex);
+                o.uv = TRANSFORM_TEX(a.texcoord.xy, _MainTex);
                 return o;
             }
 
@@ -63,8 +63,8 @@
                 float moveX2 = i.uv.x - 0.2*_Time.x;
                 float2 pos1 = float2(moveX1, i.uv.y);
                 float2 pos2 = float2(moveX2, i.uv.y);
-                float4 _texture1  = tex2D(_MainTex,pos1);
-                float4 _texture2  = tex2D(_Cloud,pos2);
+                float4 _texture1  = tex2D(_MainTex, pos1);
+                float4 _texture2  = tex2D(_Cloud, pos2);
                 half4 texcolor_cloud = float4(1,1,1,0) * (_texture2.x);
                 half4 endText = lerp(texcolor_cloud, _texture1, _CloudRange);
                 // half4 endText = (texcolor_cloud+_texture1)/2;

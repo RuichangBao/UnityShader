@@ -9,6 +9,6 @@
         "**/*.exr": true,
         "**/*.png": true,
         "**/*.jpg": true,
-        "**/*.cubemap":true
+        "**/*.cubemap": true
     }
 }
