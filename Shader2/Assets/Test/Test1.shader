@@ -21,7 +21,7 @@
             v2f vert (a2v v){
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.pos);
-                o.col = float4(v.pos.x+0.5, v.pos.y+0.5, v.pos.z+0.5, 1);
+                o.col = float4(v.pos.x + 0.5, v.pos.y + 0.5, v.pos.z + 0.5, 1);
                 //o.col = v.texcoord;
                 return o;
             }

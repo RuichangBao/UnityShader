@@ -4,10 +4,10 @@ Shader "UnityShadersBook/Chapter7/SingleTexture"
 {
     Properties
     {
-        _Color("Color Tint",Color)=(1,1,1,1)
-        _MainTex("Main Tex",2D)="white"{}
-        _Specular("Specular",Color)=(1,1,1,1)
-        _Gloss("Gloss",Range(8,256))=20 //光泽度
+        _Color("Color Tint", Color) = (1,1,1,1)
+        _MainTex("Main Tex", 2D) = "white"{}
+        _Specular("Specular", Color) = (1,1,1,1)
+        _Gloss("Gloss", Range(8,256)) = 20 //光泽度
     }
     SubShader
     {
@@ -65,15 +65,15 @@ Shader "UnityShadersBook/Chapter7/SingleTexture"
                 //光照方向
                 fixed3 worldLightDir = normalize(UnityWorldSpaceLightDir(i.worldPos));
                 //漫反射
-                fixed3 diffuse = _LightColor0.rgb * albedo * max(0,dot(worldNormal,worldLightDir));
+                fixed3 diffuse = _LightColor0.rgb * albedo * max(0, dot(worldNormal, worldLightDir));
 
                 //高光反射部分
                 //视角方向
                 fixed3 viewDir = normalize(UnityWorldSpaceViewDir(i.worldPos));
                 //h
                 fixed3 halfDir = normalize(worldLightDir + viewDir);
-                fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(max(0,dot(worldNormal,halfDir)),_Gloss);
-                return fixed4(ambient + diffuse + specular,1);
+                fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(max(0, dot(worldNormal, halfDir)), _Gloss);
+                return fixed4(ambient + diffuse + specular, 1);
             }
             
             ENDCG

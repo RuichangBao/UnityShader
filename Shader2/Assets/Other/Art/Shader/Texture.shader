@@ -29,7 +29,7 @@
             {
                 v2f v;
                 v.pos=UnityObjectToClipPos(a.pos);
-                v.uv =a.texcoord.xy;
+                v.uv = a.texcoord.xy;
                 return v;
             }
             
