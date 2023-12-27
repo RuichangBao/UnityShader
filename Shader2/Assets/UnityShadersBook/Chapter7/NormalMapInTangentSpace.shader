@@ -3,11 +3,11 @@ Shader "UnityShadersBook/Chapter7/NormalMapInTangentSpace"
 {
     Properties
     {
-        _Color("Color Tint", Color) = (1,1,1,1)
-        _MainTex("Main Tex", 2D) = "white" {}
+        [HDR]_Color("Color Tint", Color) = (1,1,1,1)
+        [MainTexture]_MainTex("Main Tex", 2D) = "white" {}
         _BumpMap("Normal Map", 2D) = "bump" {}  //凹凸纹理
         _BumpScale("Bump Scale", Float) = 1.0
-        _Specular("Specular", Color) = (1,1,1,1)//高光反射颜色
+        [HDR]_Specular("Specular", Color) = (1,1,1,1)//高光反射颜色
         _Gloss("Gloss", Range(8.0, 256)) = 20   //光泽度
     }
     SubShader
@@ -51,20 +51,21 @@ Shader "UnityShadersBook/Chapter7/NormalMapInTangentSpace"
             {
                 v2f o;
                 o.pos = UnityObjectToClipPos(v.vertex);
-                // o.uv.xy = v.texcoord.xy * _MainTex_ST.xy + _MainTex_ST.zw;
-                o.uv.xy = TRANSFORM_TEX(v.texcoord,_MainTex);
-                // o.uv.zw = v.texcoord.xy * _BumpMap_ST.xy + _BumpMap_ST.zw;
-                o.uv.zw = TRANSFORM_TEX(v.texcoord,_BumpMap);
+                o.uv.xy = TRANSFORM_TEX(v.texcoord, _MainTex);
+                o.uv.zw = TRANSFORM_TEX(v.texcoord, _BumpMap);
 
                 //计算副法线 cross：求向量的叉积
+                //tangent.w:副切线的方向性
                 float3 binormal = cross(normalize(v.normal), normalize(v.tangent.xyz)) * v.tangent.w;
                 //切线空间(模型空间到切线空间矩阵)：x 切线方向 y 法线和切线的叉积得到 z 法线方向
                 float3x3 rotation = float3x3(v.tangent.xyz, binormal, v.normal);
                 // TANGENT_SPACE_ROTATION;
                 
-                //将光线方向从模型空间转换为切线空间 ObjSpaceLightDir：求模型空间下某一点的光源方向
+                //将光线方向从模型空间转换为切线空间 
+                //ObjSpaceLightDir：求模型空间下某一点的光源方向
                 o.lightDir = mul(rotation, ObjSpaceLightDir(v.vertex)).xyz;
-                //将视角方向从模型空间转换为切线空间 ObjSpaceViewDir：求模型空间下某一点的视角方向
+                //将视角方向从模型空间转换为切线空间 
+                //ObjSpaceViewDir：求模型空间下某一点的视角方向
                 o.viewDir = mul(rotation, ObjSpaceViewDir(v.vertex)).xyz;
                 return o;
             }
@@ -86,7 +87,7 @@ Shader "UnityShadersBook/Chapter7/NormalMapInTangentSpace"
                 tangentNormal.xy *=_BumpScale;
                 tangentNormal.z = sqrt(1.0 - saturate(dot(tangentNormal.xy, tangentNormal.xy)));
                 
-                fixed3 albedo = tex2D(_MainTex, i.uv).rgb * _Color.rgb;
+                fixed3 albedo = tex2D(_MainTex, i.uv.xy).rgb * _Color.rgb;
                 //环境光
                 fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz * albedo;
                 fixed3 diffuse = _LightColor0.rgb * albedo * max(0,dot(tangentNormal, tangentLightDir));

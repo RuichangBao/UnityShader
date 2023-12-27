@@ -1,34 +1,43 @@
 ﻿Shader "Custom/Test1"
-{
+{ 
+    Properties
+    {
+        _MainTex("MainTex",2D) = "white"{}
+    }
     SubShader
     {
+        
         Pass
         {
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            
+            #include "UnityCG.cginc"
+
             struct a2v{
                 float4 pos : POSITION;
                 float4 texcoord : TEXCOORD0;
             };
-            
+
             struct v2f{
-                float4 vertex:SV_POSITION;
-                float4 col:TEXCOORD0;
+                float4 pos : SV_POSITION;
+                float2 uv : TEXCOORD0;
             };
 
+            sampler2D _MainTex;
+            float4 _MainTex_ST;
             v2f vert (a2v v){
                 v2f o;
-                o.vertex = UnityObjectToClipPos(v.pos);
-                o.col = float4(v.pos.x + 0.5, v.pos.y + 0.5, v.pos.z + 0.5, 1);
-                //o.col = v.texcoord;
+                o.pos = UnityObjectToClipPos(v.pos);
+                // o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
+                o.uv = v.texcoord.xy ;//* _MainTex_ST.xy;
                 return o;
             }
             
             fixed4 frag (v2f o) : SV_Target{
-                // return fixed4(o.col.xyz,1);
-                return o.col;
+                fixed4 col = tex2D(_MainTex, o.uv);
+                return col;
+                // return o.uv;
             }
             ENDCG
         }

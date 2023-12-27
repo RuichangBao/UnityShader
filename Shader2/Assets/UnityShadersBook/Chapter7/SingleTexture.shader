@@ -4,8 +4,8 @@ Shader "UnityShadersBook/Chapter7/SingleTexture"
 {
     Properties
     {
-        _Color("Color Tint", Color) = (1,1,1,1)
-        _MainTex("Main Tex", 2D) = "white"{}
+        [HDR]_Color("Color Tint", Color) = (1,1,1,1)
+        [MainTexture]_MainTex("Main Tex", 2D) = "white"{}
         _Specular("Specular", Color) = (1,1,1,1)
         _Gloss("Gloss", Range(8,256)) = 20 //光泽度
     }
