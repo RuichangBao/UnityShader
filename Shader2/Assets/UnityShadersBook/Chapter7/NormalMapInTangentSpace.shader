@@ -51,6 +51,7 @@ Shader "UnityShadersBook/Chapter7/NormalMapInTangentSpace"
             {
                 v2f o;
                 o.pos = UnityObjectToClipPos(v.vertex);
+                // o.uv.xy= v.texcoord.xy * _MainTex_ST.xy + _MainTex_ST.zw;
                 o.uv.xy = TRANSFORM_TEX(v.texcoord, _MainTex);
                 o.uv.zw = TRANSFORM_TEX(v.texcoord, _BumpMap);
 
@@ -90,7 +91,8 @@ Shader "UnityShadersBook/Chapter7/NormalMapInTangentSpace"
                 fixed3 albedo = tex2D(_MainTex, i.uv.xy).rgb * _Color.rgb;
                 //环境光
                 fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz * albedo;
-                fixed3 diffuse = _LightColor0.rgb * albedo * max(0,dot(tangentNormal, tangentLightDir));
+                //漫反射
+                fixed3 diffuse = _LightColor0.rgb * albedo * max(0, dot(tangentNormal, tangentLightDir));
 
                 fixed3 halfDir = normalize(tangentLightDir + tangentViewDir);
                 fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(max(0, dot(tangentNormal, halfDir)), _Gloss);
