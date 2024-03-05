@@ -30,12 +30,14 @@ Shader "UnityShadersBook/Chapter10/Reflection"
             #pragma vertex vert
             #pragma fragment frag
 
-            struct a2v {
+            struct a2v 
+            {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
             };
 
-            struct v2f {
+            struct v2f 
+            {
                 float4 pos : SV_POSITION;
                 float3 worldPos : TEXCOORD0;
                 float3 worldNormal : TEXCOORD1;

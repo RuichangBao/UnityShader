@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class RenderCubemapWizard : ScriptableWizard
 {
-    public Transform renderFromPosition;
     public Cubemap cubemap;
 
     void OnWizardUpdate()
@@ -21,7 +20,7 @@ public class RenderCubemapWizard : ScriptableWizard
         GameObject go = new GameObject("CubemapCamera");
         go.AddComponent<Camera>();
         // place it on the object
-        go.transform.position = renderFromPosition.position;
+        go.transform.position = Vector3.zero;
         go.transform.rotation = Quaternion.identity;
         // render into cubemap
         go.GetComponent<Camera>().RenderToCubemap(cubemap);

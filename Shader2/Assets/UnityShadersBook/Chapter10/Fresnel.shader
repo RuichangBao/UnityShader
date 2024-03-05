@@ -11,8 +11,6 @@ Shader"UnityShadersBook/Chapter10/Fresnel"
     }
     SubShader
     {
-        
-
         Pass
         {
             CGPROGRAM

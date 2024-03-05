@@ -3,14 +3,16 @@
 //折射
 Shader "UnityShadersBook/Chapter10/Refraction"
 {
-    Properties {
+    Properties 
+    {
         _Color ("Color Tint", Color) = (1, 1, 1, 1)
         _RefractColor ("折射颜色", Color) = (1, 1, 1, 1)
         _RefractAmount ("折射量", Range(0, 1)) = 1
         _RefractRatio ("折射比", Range(0.1, 1)) = 0.5
         _Cubemap ("Refraction Cubemap", Cube) = "_Skybox" {}//折射纹理
     }
-    SubShader {
+    SubShader 
+    {
         Tags { "RenderType"="Opaque" "Queue"="Geometry"}
         
         Pass { 
@@ -32,12 +34,14 @@ Shader "UnityShadersBook/Chapter10/Refraction"
             fixed _RefractRatio;//折射比
             samplerCUBE _Cubemap;
             
-            struct a2v {
+            struct a2v 
+            {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
             };
             
-            struct v2f {
+            struct v2f 
+            {
                 float4 pos : SV_POSITION;
                 float3 worldPos : TEXCOORD0;
                 fixed3 worldNormal : TEXCOORD1;
@@ -46,7 +50,8 @@ Shader "UnityShadersBook/Chapter10/Refraction"
                 SHADOW_COORDS(4)
             };
             
-            v2f vert(a2v v) {
+            v2f vert(a2v v)
+            {
                 v2f o;
                 //裁剪坐标
                 o.pos = UnityObjectToClipPos(v.vertex);
@@ -63,11 +68,17 @@ Shader "UnityShadersBook/Chapter10/Refraction"
                 return o;
             }
             
-            fixed4 frag(v2f i) : SV_Target {
+            fixed4 frag(v2f i) : SV_Target 
+            {
+                //世界空间下的法线
                 fixed3 worldNormal = normalize(i.worldNormal);
+                //世界空间下的光源方向
                 fixed3 worldLightDir = normalize(UnityWorldSpaceLightDir(i.worldPos));
+                //世界空间下的视角方向
                 fixed3 worldViewDir = normalize(i.worldViewDir);
+                //环境光
                 fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
+                //漫反射
                 fixed3 diffuse = _LightColor0.rgb * _Color.rgb * max(0, dot(worldNormal, worldLightDir));
                 
                 //使用世界空间下的折射方向来访问立方体纹理
