@@ -4,7 +4,8 @@ struct a2v {
     float3 normal : NORMAL;
 };
 
-struct v2f {
+struct v2f
+{
     float4 pos : SV_POSITION;
     fixed3 color : COLOR0;
 };
