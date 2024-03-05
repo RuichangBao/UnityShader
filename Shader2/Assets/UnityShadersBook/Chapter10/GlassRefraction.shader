@@ -1,7 +1,8 @@
 ﻿//玻璃效果
 Shader "UnityShadersBook/Chapter10/GlassRefraction"
 {
-    Properties {
+    Properties
+    {
         _MainTex ("材质纹理", 2D) = "white" {}  //玻璃的材质纹理
         _BumpMap ("法线纹理", 2D) = "bump" {}   //玻璃的法线纹理
         _Cubemap ("环境纹理", Cube) = "_Skybox" {}//反射环境纹理
@@ -13,7 +14,8 @@ Shader "UnityShadersBook/Chapter10/GlassRefraction"
         Tags { "RenderType" = "Opaque" "Queue" = "Transparent" }
         //GrabPass可以获取屏幕图像
         GrabPass { "_RefractionTex" }
-        Pass { 
+        Pass 
+        { 
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
@@ -30,14 +32,16 @@ Shader "UnityShadersBook/Chapter10/GlassRefraction"
             sampler2D _RefractionTex;
             float4 _RefractionTex_TexelSize;
 
-            struct a2v {
+            struct a2v 
+            {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
                 float4 tangent : TANGENT; 
                 float2 texcoord: TEXCOORD0;
             };
 
-            struct v2f {
+            struct v2f 
+            {
                 float4 pos : SV_POSITION;
                 float4 scrPos : TEXCOORD0;
                 float4 uv : TEXCOORD1;
@@ -46,7 +50,8 @@ Shader "UnityShadersBook/Chapter10/GlassRefraction"
                 float4 TtoW2 : TEXCOORD4; 
             };
 
-            v2f vert (a2v v) {
+            v2f vert (a2v v) 
+            {
                 v2f o;
                 o.pos = UnityObjectToClipPos(v.vertex);
                 //屏幕坐标
@@ -70,7 +75,8 @@ Shader "UnityShadersBook/Chapter10/GlassRefraction"
                 return o;
             }
 
-            fixed4 frag (v2f i) : SV_Target {		
+            fixed4 frag (v2f i) : SV_Target 
+            {		
                 float3 worldPos = float3(i.TtoW0.w, i.TtoW1.w, i.TtoW2.w);
                 fixed3 worldViewDir = normalize(UnityWorldSpaceViewDir(worldPos));
                 

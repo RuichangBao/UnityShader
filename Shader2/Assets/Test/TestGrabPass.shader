@@ -1,6 +1,5 @@
 Shader "Unlit/TestGrabPass"
 {
-    
     SubShader
     {
         Tags { "RenderType" = "Opaque" "Queue" = "Transparent" }
@@ -21,18 +20,19 @@ Shader "Unlit/TestGrabPass"
 
             struct v2f
             {
-                float4 grabPos : TEXCOORD0;
                 float4 pos : SV_POSITION;
+                // float4 grabPos : TEXCOORD0;
+                float2 uv : TEXCOORD0;
             };
 
-            v2f vert(appdata_base v) {
+            v2f vert(appdata_base v)
+            {
                 v2f o;
-                // 使用 UnityCG.cginc 中的 UnityObjectToClipPos 来计算
-                // 顶点的裁剪空间
                 o.pos = UnityObjectToClipPos(v.vertex);
                 // 使用 UnityCG.cginc 中的 ComputeGrabScreenPos 函数
                 // 获得正确的纹理坐标
-                o.grabPos = ComputeGrabScreenPos(o.pos);
+                // o.grabPos = ComputeGrabScreenPos(o.pos);
+                o.uv = 1- v.texcoord.xy ;
                 return o;
             }
 
@@ -40,9 +40,10 @@ Shader "Unlit/TestGrabPass"
 
             half4 frag(v2f i) : SV_Target
             {
-                half4 bgcolor = tex2Dproj(_BackgroundTexture, i.grabPos);
-                return 1 - bgcolor;
-                // return bgcolor;
+                // half4 bgcolor = tex2Dproj(_BackgroundTexture, i.grabPos);
+                // return 1 - bgcolor;
+                half4 bgcolor = tex2D(_BackgroundTexture, i.uv);
+                return bgcolor;
             }
             ENDCG
         }
