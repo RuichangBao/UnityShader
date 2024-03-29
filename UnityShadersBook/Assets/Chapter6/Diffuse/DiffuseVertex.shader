@@ -18,7 +18,7 @@ Shader "Chapter6/DiffuseVertex"
             fixed4 _Diffuse;
             struct a2v
             {
-                float4 pos:POSITION;
+                float4 vertex:POSITION;
                 float3 normal:NORMAL;
             };
             struct v2f
@@ -30,12 +30,16 @@ Shader "Chapter6/DiffuseVertex"
             v2f vert(a2v v)
             {
                 v2f o;
-                o.pos = UnityObjectToClipPos(v.pos);
+                o.pos = UnityObjectToClipPos(v.vertex);
+                //环境光
                 fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
+                //世界空间下的法线
                 fixed3 worldNormal = normalize(UnityObjectToWorldNormal(v.normal));
+                //观察方向
                 fixed3 worldLightDir = normalize(_WorldSpaceLightPos0.xyz);
+                //saturate 把输入值限制到[0, 1]之间。dot:返回两个向量的点积。
                 fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * saturate(dot(worldNormal, worldLightDir));
-                o.color = float4(ambient + diffuse,1);
+                o.color = float4(ambient + diffuse, 1);
                 return o;
             }
 

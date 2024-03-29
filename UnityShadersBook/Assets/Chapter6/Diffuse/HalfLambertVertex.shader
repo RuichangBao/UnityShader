@@ -18,7 +18,7 @@ Shader "Chapter6/DiffuseVertexLevel"
             fixed4 _Diffuse;
             struct a2v
             {
-                float4 pos:POSITION;
+                float4 vertex:POSITION;
                 float3 normal:NORMAL;
             };
             struct v2f
@@ -30,7 +30,7 @@ Shader "Chapter6/DiffuseVertexLevel"
             v2f vert(a2v v)
             {
                 v2f o;
-                o.pos = UnityObjectToClipPos(v.pos);
+                o.pos = UnityObjectToClipPos(v.vertex);
                 fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
                 fixed3 worldNormal = normalize(mul(v.normal, (float3x3)unity_WorldToObject));
                 fixed3 worldLightDir = normalize(_WorldSpaceLightPos0.xyz);

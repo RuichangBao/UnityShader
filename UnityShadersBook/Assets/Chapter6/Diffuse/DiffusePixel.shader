@@ -18,7 +18,7 @@ Shader "Chapter6/DiffusePixel"
             fixed4 _Diffuse;
             struct a2v
             {
-                float4 pos:POSITION;
+                float4 vertex:POSITION;
                 float3 normal:NORMAL;
             };
             struct v2f
@@ -30,15 +30,17 @@ Shader "Chapter6/DiffusePixel"
             v2f vert(a2v v)
             {
                 v2f o;
-                o.pos = UnityObjectToClipPos(v.pos);
+                o.pos = UnityObjectToClipPos(v.vertex);
                 o.worldNormal = UnityObjectToWorldNormal(v.normal).xyz;
                 return o;
             }
 
             float4 frag(v2f v):SV_Target
             { 
+                //环境光
                 fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
                 fixed3 worldNormal = normalize(v.worldNormal);
+                //观察方向
                 fixed3 worldLightDir = normalize(_WorldSpaceLightPos0.xyz);
                 fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * saturate(dot(worldNormal, worldLightDir));
                 fixed3 color = ambient + diffuse;

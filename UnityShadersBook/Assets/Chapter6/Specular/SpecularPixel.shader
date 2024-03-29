@@ -24,7 +24,7 @@ Shader "Unlit/SpecularPixel"
 
             struct a2v
             {
-                float4 pos:POSITION;
+                float4 vertex:POSITION;
                 float3 normal:NORMAL;
             };
             struct v2f
@@ -37,8 +37,8 @@ Shader "Unlit/SpecularPixel"
             v2f vert(a2v v)
             {
                 v2f o;
-                o.pos = UnityObjectToClipPos(v.pos);
-                o.worldPos = mul(unity_ObjectToWorld, v.pos);
+                o.pos = UnityObjectToClipPos(v.vertex);
+                o.worldPos = mul(unity_ObjectToWorld, v.vertex);
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
                 return o;
             }
@@ -49,8 +49,10 @@ Shader "Unlit/SpecularPixel"
                 fixed3 worldNormal = normalize(v.worldNormal);
                 fixed3 worldLightDir = normalize(_WorldSpaceLightPos0.xyz);
                 fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * saturate(dot(worldNormal, worldLightDir));
+                //reflect(i,n)返回入射光线i对表面法线n的反射光线。
                 fixed3 reflectDir = normalize(reflect(-worldLightDir, worldNormal));
                 fixed3 viewDir = normalize(_WorldSpaceCameraPos.xyz - v.worldPos.xyz);
+                //dot 叉积
                 fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(saturate(dot(reflectDir, viewDir)), _Gloss);
                 fixed3 color = ambient + diffuse + specular;
                 return fixed4(color, 1.0);

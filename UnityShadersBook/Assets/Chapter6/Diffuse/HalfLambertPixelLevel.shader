@@ -18,7 +18,7 @@ Shader "Chapter6/HalfLambertPixelLevel"
             fixed4 _Diffuse;
             struct a2v
             {
-                float4 pos:POSITION;
+                float4 vertex:POSITION;
                 float3 normal:NORMAL;
             };
             struct v2f
@@ -30,7 +30,7 @@ Shader "Chapter6/HalfLambertPixelLevel"
             v2f vert(a2v v)
             {
                 v2f o;
-                o.pos = UnityObjectToClipPos(v.pos);
+                o.pos = UnityObjectToClipPos(v.vertex);
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
                 return o;
             }
