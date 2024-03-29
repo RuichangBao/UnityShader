@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        "**/*.meta": true,
+        "**/*.mat": true,
+        "**/*.unity": true,
+        "**/*.FBX": true,
+        "**/*.tga": true,
+        "**/*.asset": true,
+        "**/*.exr": true,
+        "**/*.png": true,
+        "**/*.jpg": true,
+        "**/*.cubemap": true
+    }
+}

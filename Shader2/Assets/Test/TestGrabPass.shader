@@ -17,22 +17,22 @@ Shader "Unlit/TestGrabPass"
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
-
+            struct a2v
+            {
+                float4 pos : POSITION;
+                float4 uv : TEXCOORD0;
+            };
             struct v2f
             {
                 float4 pos : SV_POSITION;
-                // float4 grabPos : TEXCOORD0;
                 float2 uv : TEXCOORD0;
             };
 
-            v2f vert(appdata_base v)
+            v2f vert(a2v v)
             {
                 v2f o;
-                o.pos = UnityObjectToClipPos(v.vertex);
-                // 使用 UnityCG.cginc 中的 ComputeGrabScreenPos 函数
-                // 获得正确的纹理坐标
-                // o.grabPos = ComputeGrabScreenPos(o.pos);
-                o.uv = 1- v.texcoord.xy ;
+                o.pos = UnityObjectToClipPos(v.pos);
+                o.uv = 1 - v.uv.xy;
                 return o;
             }
 
@@ -40,8 +40,6 @@ Shader "Unlit/TestGrabPass"
 
             half4 frag(v2f i) : SV_Target
             {
-                // half4 bgcolor = tex2Dproj(_BackgroundTexture, i.grabPos);
-                // return 1 - bgcolor;
                 half4 bgcolor = tex2D(_BackgroundTexture, i.uv);
                 return bgcolor;
             }
