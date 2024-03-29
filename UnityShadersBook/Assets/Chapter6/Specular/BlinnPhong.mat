@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BlinnPhong
-  m_Shader: {fileID: 4800000, guid: be9895b2ed6ee514c8e7835d7cfaf10d, type: 3}
+  m_Shader: {fileID: 4800000, guid: 820713b31c0bb7f4f91e125d3c9bfb45, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4

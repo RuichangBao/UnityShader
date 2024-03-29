@@ -550,3 +550,9 @@ Received Import Request.
   path: Assets/Chapter6/Specular/SpecularPixel.shader
   artifactKey: Guid(be9895b2ed6ee514c8e7835d7cfaf10d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Chapter6/Specular/SpecularPixel.shader using Guid(be9895b2ed6ee514c8e7835d7cfaf10d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e331510abecff761276203ec68dbb085') in 0.002381 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.935615 seconds.
+  path: Assets/Chapter6/Specular/SpecularPixel.shader
+  artifactKey: Guid(be9895b2ed6ee514c8e7835d7cfaf10d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Chapter6/Specular/SpecularPixel.shader using Guid(be9895b2ed6ee514c8e7835d7cfaf10d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4183b5b4f744a3867d42aef3ca2691e3') in 0.004661 seconds 
