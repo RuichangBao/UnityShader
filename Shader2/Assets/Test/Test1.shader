@@ -4,6 +4,7 @@
     {
         Pass
         {
+            ColorMask RB
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
@@ -15,7 +16,7 @@
             
             float4 frag ():SV_Target
             {
-                return float4(1,1,1,1)*float4(1,0,0,1);
+                return float4(1,1,1,1);
             }
             ENDCG
         }

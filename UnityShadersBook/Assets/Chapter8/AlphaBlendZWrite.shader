@@ -21,7 +21,7 @@ Shader "Chapter8/AlphaBlend"
             Tags { "LightMode"="ForwardBase" }
             ZWrite Off
             Blend SrcAlpha OneMinusSrcAlpha
-            
+            // Blend OneMinusDstColor OneMinusSrcAlpha
             CGPROGRAM
             
             #pragma vertex vert
