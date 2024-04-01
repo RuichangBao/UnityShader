@@ -9,6 +9,14 @@
         "**/*.exr": true,
         "**/*.png": true,
         "**/*.jpg": true,
-        "**/*.cubemap": true
+        "**/*.cubemap": true,
+        "**/*.JPG": true,
+        "**/*.psd": true,
+        "**/*.absar": true,
+        "**/*.renderTexture": true,
+        "**/*.tif": true,
+        "**/*.pdf": true,
+        "**/*.hdr": true,
+        "**/*.sbsar": true
     }
 }
