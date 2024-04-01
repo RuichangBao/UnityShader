@@ -1,3 +1,4 @@
+//渐变纹理
 Shader "Chapter7/RampTexture" 
 {
     Properties {

@@ -3748,3 +3748,21 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 785.620473 seconds.
+  path: Assets/Chapter7/RampTexture.unity
+  artifactKey: Guid(7dac2fe4f454dfa4db787ed3f538afda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Chapter7/RampTexture.unity using Guid(7dac2fe4f454dfa4db787ed3f538afda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b1c06fc08af9e75c2ef5c4b0a729cb2') in 0.007339 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.043034 seconds.
+  path: Assets/Chapter7/RampTexture.shader
+  artifactKey: Guid(993a3a8ccb602f34eb3dfcb7c4b9898c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Chapter7/RampTexture.shader using Guid(993a3a8ccb602f34eb3dfcb7c4b9898c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58212eeefd8c99c31fd3444a91c37bf4') in 0.010618 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 430.804929 seconds.
+  path: Assets/Chapter7/SingleTexture.shader
+  artifactKey: Guid(66e01cb518448e343811040b02985231) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Chapter7/SingleTexture.shader using Guid(66e01cb518448e343811040b02985231) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22ec2a4cf4efac66f667c3d594994dc2') in 0.002130 seconds 

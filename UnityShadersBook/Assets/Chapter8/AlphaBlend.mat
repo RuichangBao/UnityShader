@@ -7,12 +7,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TeddyBear_color
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ValidKeywords:
-  - _EMISSION
+  m_Name: AlphaBlend
+  m_Shader: {fileID: 4800000, guid: 20f0088efa6e3f7498a0849a02e42da4, type: 3}
+  m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 1
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -42,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b267cbeeb93b04e788664246bdc46985, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -59,8 +58,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaScale: 1
     - _BumpScale: 1
-    - _Cutoff: 0.5
+    - _Cutoff: 0.643
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
