@@ -90,14 +90,10 @@ Shader "Chapter7/NormalMapWorldSpace"
                 float3x3 tangentToWorld = float3x3(i.TtoW0.xyz, i.TtoW1.xyz, i.TtoW2.xyz);
                 bump = normalize(mul(tangentToWorld, bump));
                 fixed3 albedo = tex2D(_MainTex, i.uv).rgb * _Color.rgb;
-                
                 fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz * albedo;
-                
                 fixed3 diffuse = _LightColor0.rgb * albedo * max(0, dot(bump, lightDir));
-
                 fixed3 halfDir = normalize(lightDir + viewDir);
                 fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(max(0, dot(bump, halfDir)), _Gloss);
-                
                 return fixed4(ambient + diffuse + specular, 1.0);
             }
             ENDCG
