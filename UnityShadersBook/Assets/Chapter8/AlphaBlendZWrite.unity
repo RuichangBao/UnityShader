@@ -312,6 +312,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knot
       objectReference: {fileID: 0}
+    - target: {fileID: 155856, guid: f8049a350dfbf412cbe85b6e8228c577, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 404794, guid: f8049a350dfbf412cbe85b6e8228c577, type: 3}
       propertyPath: m_RootOrder
       value: 2

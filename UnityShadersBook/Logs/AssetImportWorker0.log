@@ -3976,3 +3976,9 @@ Received Import Request.
   path: Assets/Chapter8/AlphaBlendZWrite.shader
   artifactKey: Guid(5c62eb0b465ddb147973eb7d55dd74ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Chapter8/AlphaBlendZWrite.shader using Guid(5c62eb0b465ddb147973eb7d55dd74ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62a801b1ff6fa74301288e3c8e0b45b9') in 0.002551 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 736.382788 seconds.
+  path: Assets/Prefabs/Common
+  artifactKey: Guid(6b9829a9e29ea4765884a4a46fbcfb26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Common using Guid(6b9829a9e29ea4765884a4a46fbcfb26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '389bd3fa04f62dac8f11931b4e0c6ac4') in 0.001687 seconds 

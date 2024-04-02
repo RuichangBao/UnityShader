@@ -16,7 +16,7 @@ Shader "Chapter8/AlphaBlend"
 
             ZWrite Off
             Blend SrcAlpha OneMinusSrcAlpha
-            
+            Cull Off//关闭剔除
             CGPROGRAM
             
             #pragma vertex vert
