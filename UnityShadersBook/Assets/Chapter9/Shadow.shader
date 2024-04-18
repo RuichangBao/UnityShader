@@ -1,4 +1,5 @@
-Shader "Chapter9/ForwardRendering"
+//阴影
+Shader "Chapter9/Shadow"
 {
     Properties
     {
@@ -15,6 +16,7 @@ Shader "Chapter9/ForwardRendering"
             Tags{"LightMode" = "ForwardBase"}
             CGPROGRAM
             #include "Lighting.cginc"
+            #include "AutoLight.cginc"
 
             #pragma multi_compile_fwdbase
 
@@ -30,9 +32,10 @@ Shader "Chapter9/ForwardRendering"
 
             struct v2f
             {
-                float4 vertex : SV_POSITION;
+                float4 pos : SV_POSITION;
                 fixed3 worldNormal : TEXCOORD0;
                 fixed3 worldPos : TEXCOORD1;
+                SHADOW_COORDS(2)
             };
 
             float4 _Diffuse;
@@ -42,9 +45,10 @@ Shader "Chapter9/ForwardRendering"
             v2f vert (a2v v)
             {
                 v2f o;
-                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.pos = UnityObjectToClipPos(v.vertex);
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+                TRANSFER_SHADOW(o);
                 return o;
             }
 
@@ -60,8 +64,8 @@ Shader "Chapter9/ForwardRendering"
                 fixed3 halfDir = normalize(worldLightDir + viewDir);
                 fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(max(0, dot(worldNormal, halfDir)), _Gloss);
                 fixed atten = 1;
-
-                return fixed4(ambient + (diffuse + specular) * atten, 1);
+                fixed shadow = SHADOW_ATTENUATION(i);
+                return fixed4(ambient + (diffuse + specular) * atten * shadow, 1);
             }
             ENDCG
         }
