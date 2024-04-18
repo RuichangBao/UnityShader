@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shadow
-  m_Shader: {fileID: 4800000, guid: ad179e56a64e8ac43b65e37586aa9d70, type: 3}
+  m_Name: AttenuationAndShadowUseBuildInFunctions
+  m_Shader: {fileID: 4800000, guid: 72cf51779a8a23641818ded795948115, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4

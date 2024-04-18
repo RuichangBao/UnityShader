@@ -1,5 +1,5 @@
-//阴影
-Shader "Chapter9/Shadow"
+//光照衰减（计算阴影的时候顺便计算光照衰减）
+Shader "Chapter9/AttenuationAndShadowUseBuildInFunctions"
 {
     Properties
     {
@@ -65,10 +65,9 @@ Shader "Chapter9/Shadow"
                 fixed3 viewDir = normalize(_WorldSpaceCameraPos.xyz - i.worldPos.xyz);
                 fixed3 halfDir = normalize(worldLightDir + viewDir);
                 fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(max(0, dot(worldNormal, halfDir)), _Gloss);
-                fixed atten = 1;
-                //在片元着色器种计算阴影值
-                fixed shadow = SHADOW_ATTENUATION(i);
-                return fixed4(ambient + (diffuse + specular) * atten * shadow, 1);
+                //在片元着色器种计算阴影值和衰减
+                UNITY_LIGHT_ATTENUATION(atten, i, i.worldPos);
+                return fixed4(ambient + (diffuse + specular) * atten , 1);
             }
             ENDCG
         }
@@ -98,6 +97,8 @@ Shader "Chapter9/Shadow"
                 float4 vertex : SV_POSITION;
                 fixed3 worldNormal : TEXCOORD0;
                 fixed3 worldPos : TEXCOORD1;
+                //声明一个用于阴影纹理采样的坐标
+                SHADOW_COORDS(2)
             };
 
             float4 _Diffuse;
@@ -110,6 +111,8 @@ Shader "Chapter9/Shadow"
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+                //在顶点着色器种计算阴影纹理坐标
+                TRANSFER_SHADOW(o);
                 return o;
             }
             
@@ -132,23 +135,8 @@ Shader "Chapter9/Shadow"
                 fixed3 halfDir = normalize(worldLightDir + viewDir);
                 fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(max(0, dot(worldNormal, halfDir)), _Gloss);
 
-                #ifndef USING_DIRECTIONAL_LIGHT
-                    fixed atten = 1;
-                #else
-                    #if defined (POINT)
-                        float3 lightCoord = mul(unity_WorldToLight, float4(i.worldPos, 1)).xyz;
-                        fixed atten = tex2D(_LightTexture0, dot(lightCoord, lightCoord).rr).UNITY_ATTEN_CHANNEL;
-                    #elif defined (SPOT)
-                        float4 lightCoord = mul(unity_WorldToLight, float4(i.worldPos, 1));
-                        fixed atten = (lightCoord.z > 0) * tex2D(_LightTexture0, lightCoord.xy / lightCoord.w + 0.5).w * tex2D(_LightTextureB0, dot(lightCoord, lightCoord).rr).UNITY_ATTEN_CHANNEL;
-                    #else
-                        fixed atten = 1.0;
-                    #endif
-                    // float3 lightCoord = mul(unity_WorldToLight, float4(i.worldPos, 1)).xyz;
-                    // fixed atten = tex2D(_LightColor0, dot(lightCoord, lightCoord).rr).UNITY_ATTEN_CHANNEL;
-                    
-                #endif
-
+                //在片元着色器种计算阴影值和衰减
+                UNITY_LIGHT_ATTENUATION(atten, i, i.worldPos);
                 return fixed4(ambient + (diffuse + specular) * atten, 1);
             }
             
