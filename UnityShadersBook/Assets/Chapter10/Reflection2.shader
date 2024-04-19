@@ -1,5 +1,5 @@
 //环境映射 反射
-Shader "Chapter10/Reflection"
+Shader "Chapter10/Reflection2"
 {
     Properties
     {
@@ -51,10 +51,10 @@ Shader "Chapter10/Reflection"
                 o.pos = UnityObjectToClipPos(v.vertex);
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex);
-                //观察方向  UnityWorldSpaceViewDir:输入一个世界空间中的顶点位置，返回世界空间中从该点到摄像机的观察方向。
+                //观察方向
                 o.worldViewDir = UnityWorldSpaceViewDir(o.worldPos);
                 //反射方向
-                o.worldRefl = reflect(-o.worldViewDir, o.worldNormal);
+                o.worldRefl = reflect(o.worldViewDir, o.worldNormal);
                 TRANSFER_SHADOW(o);
                 return o;
             }
