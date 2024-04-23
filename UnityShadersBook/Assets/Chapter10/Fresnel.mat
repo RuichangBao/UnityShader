@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Reflection
-  m_Shader: {fileID: 4800000, guid: 6ea38538b3470cf4287092b8b4c5d5ab, type: 3}
+  m_Name: Fresnel
+  m_Shader: {fileID: 4800000, guid: 3eaad86fc5bfc12458f34cc63d671347, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -66,6 +66,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _FresnelScale: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1

@@ -9,7 +9,7 @@ public class RenderCubemapWizard : ScriptableWizard
 
     void OnWizardUpdate()
     {
-        helpString = "Select transform to render from and cubemap to render into";
+        helpString = "选择要渲染的transform和要渲染的cubemap";
         isValid = (renderFromPosition != null) && (cubemap != null);
     }
 
@@ -27,9 +27,9 @@ public class RenderCubemapWizard : ScriptableWizard
         DestroyImmediate(go);
     }
 
-    [MenuItem("GameObject/Render into Cubemap")]
+    [MenuItem("GameObject/渲染环境映射")]
     static void RenderCubemap()
     {
-        ScriptableWizard.DisplayWizard<RenderCubemapWizard>("Render cubemap", "Render!");
+        ScriptableWizard.DisplayWizard<RenderCubemapWizard>("Render cubemap", "渲染!");
     }
 }

@@ -1,16 +1,17 @@
-//环境映射 反射
-Shader "Chapter10/Reflection2"
+//环境映射 折射
+Shader "Chapter10/Refraction"
 {
     Properties
     {
         _Color("漫反射颜色", Color) = (1, 1, 1, 1)
-        _ReflectionColor("反射颜色", Color) = (1, 1, 1, 1)
-        _ReflectionAmount("反射程度", Range(0, 1)) = 1
+        _RefractColor("折射颜色", Color) = (1, 1, 1, 1)
+        _RefractAmount("折射程度", Range(0, 1)) = 1
+        _RefractRatio("折射程度", Range(0, 1)) = 0.5
         _Cubemap("环境纹理", Cube) = "_Skybox" {}
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" "Queue"="Geometry"}
+        Tags {"RenderType"="Opaque" "Queue"="Geometry"}
 
         Pass
         {
@@ -41,8 +42,9 @@ Shader "Chapter10/Reflection2"
             };
 
             fixed4 _Color;
-            fixed4 _ReflectionColor;
-            fixed _ReflectionAmount;
+            fixed4 _RefractColor;
+            fixed _RefractAmount;
+            fixed _RefractRatio;
             samplerCUBE _Cubemap;
             
             v2f vert (a2v v)
@@ -51,10 +53,10 @@ Shader "Chapter10/Reflection2"
                 o.pos = UnityObjectToClipPos(v.vertex);
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex);
-                //观察方向
+                //观察方向  UnityWorldSpaceViewDir:输入一个世界空间中的顶点位置，返回世界空间中从该点到摄像机的观察方向。
                 o.worldViewDir = UnityWorldSpaceViewDir(o.worldPos);
-                //反射方向
-                o.worldRefl = reflect(o.worldViewDir, o.worldNormal);
+                //折射方向
+                o.worldRefl = refract(-normalize(o.worldViewDir), normalize(o.worldNormal), _RefractRatio);
                 TRANSFER_SHADOW(o);
                 return o;
             }
@@ -67,9 +69,9 @@ Shader "Chapter10/Reflection2"
                 fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
                 //cdiffuse = (clight · mdiffuse)max(0,n·I)
                 fixed3 diffuse = _LightColor0.rgb * _Color.rgb * max(0, dot(worldNormal, worldLightDir));
-                fixed3 reflection = texCUBE(_Cubemap, i.worldRefl).rgb * _ReflectionColor.rgb;
+                fixed3 refraction = texCUBE(_Cubemap, i.worldRefl).rgb * _RefractColor.rgb;
                 UNITY_LIGHT_ATTENUATION(atten, i, i.worldPos);
-                fixed3 color = ambient + lerp(diffuse, reflection, _ReflectionAmount) * atten;
+                fixed3 color = ambient + lerp(diffuse, refraction, _RefractAmount) * atten;
                 return fixed4(color, 1);
             }
             ENDCG

@@ -10,7 +10,7 @@ Shader "Chapter10/Reflection"
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" "Queue"="Geometry"}
+        Tags {"RenderType"="Opaque" "Queue"="Geometry"}
 
         Pass
         {
