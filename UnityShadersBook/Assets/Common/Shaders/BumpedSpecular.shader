@@ -1,13 +1,13 @@
-﻿//墙壁法线纹理
+﻿//法线贴图 墙壁
 Shader "Unity Shaders Book/Common/BumpedSpecular" 
 {
 	Properties 
 	{
 		_Color ("Color Tint", Color) = (1, 1, 1, 1)
-		_MainTex ("主贴图", 2D) = "white" {}
-		_BumpMap ("法线贴图", 2D) = "bump" {}
-		_Specular ("高光反射颜色", Color) = (1, 1, 1, 1)
-		_Gloss ("光泽度", Range(8.0, 256)) = 20
+		_MainTex ("Main Tex", 2D) = "white" {}
+		_BumpMap ("Normal Map", 2D) = "bump" {}
+		_Specular ("Specular Color", Color) = (1, 1, 1, 1)
+		_Gloss ("Gloss", Range(8.0, 256)) = 20
 	}
 	SubShader 
 	{
@@ -36,7 +36,7 @@ Shader "Unity Shaders Book/Common/BumpedSpecular"
 			fixed4 _Specular;
 			float _Gloss;
 			
-			struct a2v
+			struct a2v 
 			{
 				float4 vertex : POSITION;
 				float3 normal : NORMAL;
@@ -68,7 +68,7 @@ Shader "Unity Shaders Book/Common/BumpedSpecular"
 				fixed3 worldNormal = UnityObjectToWorldNormal(v.normal);  
 				fixed3 worldTangent = UnityObjectToWorldDir(v.tangent.xyz);  
 				fixed3 worldBinormal = cross(worldNormal, worldTangent) * v.tangent.w; 
-				//构建从切线空间到世界空间下的变换矩阵
+				
 				o.TtoW0 = float4(worldTangent.x, worldBinormal.x, worldNormal.x, worldPos.x);  
 				o.TtoW1 = float4(worldTangent.y, worldBinormal.y, worldNormal.y, worldPos.y);  
 				o.TtoW2 = float4(worldTangent.z, worldBinormal.z, worldNormal.z, worldPos.z);  
@@ -83,9 +83,8 @@ Shader "Unity Shaders Book/Common/BumpedSpecular"
 				float3 worldPos = float3(i.TtoW0.w, i.TtoW1.w, i.TtoW2.w);
 				fixed3 lightDir = normalize(UnityWorldSpaceLightDir(worldPos));
 				fixed3 viewDir = normalize(UnityWorldSpaceViewDir(worldPos));
-				//世界空间下的法线纹理
-				fixed4 normalMap = tex2D(_BumpMap, i.uv.zw);
-				fixed3 bump = UnpackNormal(normalMap);
+				
+				fixed3 bump = UnpackNormal(tex2D(_BumpMap, i.uv.zw));
 				bump = normalize(half3(dot(i.TtoW0.xyz, bump), dot(i.TtoW1.xyz, bump), dot(i.TtoW2.xyz, bump)));
 
 				fixed3 albedo = tex2D(_MainTex, i.uv.xy).rgb * _Color.rgb;
@@ -105,8 +104,7 @@ Shader "Unity Shaders Book/Common/BumpedSpecular"
 			ENDCG
 		}
 		
-		Pass 
-		{ 
+		Pass { 
 			Tags { "LightMode"="ForwardAdd" }
 			
 			Blend One One
@@ -115,7 +113,7 @@ Shader "Unity Shaders Book/Common/BumpedSpecular"
 			
 			#pragma multi_compile_fwdadd
 			// Use the line below to add shadows for point and spot lights
-			//#pragma multi_compile_fwdadd_fullshadows
+			//			#pragma multi_compile_fwdadd_fullshadows
 			
 			#pragma vertex vert
 			#pragma fragment frag
@@ -172,7 +170,8 @@ Shader "Unity Shaders Book/Common/BumpedSpecular"
 				return o;
 			}
 			
-			fixed4 frag(v2f i) : SV_Target {
+			fixed4 frag(v2f i) : SV_Target 
+			{
 				float3 worldPos = float3(i.TtoW0.w, i.TtoW1.w, i.TtoW2.w);
 				fixed3 lightDir = normalize(UnityWorldSpaceLightDir(worldPos));
 				fixed3 viewDir = normalize(UnityWorldSpaceViewDir(worldPos));

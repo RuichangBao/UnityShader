@@ -74,7 +74,11 @@ Shader "Chapter7/NormalMapTangentSpace"
                 fixed3 tangentViewDir = normalize(i.viewDir);
                 //凹凸纹理
                 fixed4 packedNormal = tex2D(_BumpMap, i.uv.zw);
+                // UnpackNormal
+                // tangentNormal.xy = packednormal.wy * 2 - 1;
+                // tangentNormal.z = sqrt(1 - saturate(dot(normal.xy, normal.xy)));
                 fixed3 tangentNormal = UnpackNormal(packedNormal);
+                
                 tangentNormal.xy *= _BumpScale;
                 //法向量是单位向量长度为1，所以x方+y方+z方=1
                 //根据这个公式计算z的长度，

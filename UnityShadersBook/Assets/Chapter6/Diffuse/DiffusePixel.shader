@@ -40,7 +40,7 @@ Shader "Chapter6/DiffusePixel"
                 //环境光
                 fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
                 fixed3 worldNormal = normalize(v.worldNormal);
-                //观察方向
+                //光源方向
                 fixed3 worldLightDir = normalize(_WorldSpaceLightPos0.xyz);
                 fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * saturate(dot(worldNormal, worldLightDir));
                 fixed3 color = ambient + diffuse;
