@@ -21,7 +21,7 @@
             struct v2f
             {
                 float4 pos:POSITION;
-                float2 uv:TEXCOORD2;
+                float2 uv:TEXCOORD0;
             };
 
             sampler2D _MainTex;

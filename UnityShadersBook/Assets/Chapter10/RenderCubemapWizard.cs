@@ -9,7 +9,7 @@ public class RenderCubemapWizard : ScriptableWizard
 
     void OnWizardUpdate()
     {
-        helpString = "Ñ¡ÔñÒªäÖÈ¾µÄtransformºÍÒªäÖÈ¾µÄcubemap";
+        helpString = "Ñ¡ï¿½ï¿½Òªï¿½ï¿½È¾ï¿½ï¿½transformï¿½ï¿½Òªï¿½ï¿½È¾ï¿½ï¿½cubemap";
         isValid = (renderFromPosition != null) && (cubemap != null);
     }
 
@@ -27,9 +27,9 @@ public class RenderCubemapWizard : ScriptableWizard
         DestroyImmediate(go);
     }
 
-    [MenuItem("GameObject/äÖÈ¾»·¾³Ó³Éä")]
+    [MenuItem("GameObject/ï¿½ï¿½È¾ï¿½ï¿½ï¿½ï¿½Ó³ï¿½ï¿½")]
     static void RenderCubemap()
     {
-        ScriptableWizard.DisplayWizard<RenderCubemapWizard>("Render cubemap", "äÖÈ¾!");
+        ScriptableWizard.DisplayWizard<RenderCubemapWizard>("Render cubemap", "ï¿½ï¿½È¾!");
     }
 }
