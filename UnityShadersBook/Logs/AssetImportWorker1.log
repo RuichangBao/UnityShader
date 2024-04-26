@@ -2182,3 +2182,27 @@ Received Import Request.
   path: Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/Variables@32x.png
   artifactKey: Guid(ba736aa67df8cee43b1b679c961d74f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Packages/com.unity.visualscripting/Editor/VisualScripting.Core/IconMap/Variables@32x.png using Guid(ba736aa67df8cee43b1b679c961d74f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b61d51709a671992ead68bdee4fbd4a3') in 0.038754 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 510.568726 seconds.
+  path: Assets/Chapter11/NewUnlitShader.unity
+  artifactKey: Guid(8c770edcbd70f8a48b1decda012c149b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Chapter11/NewUnlitShader.unity using Guid(8c770edcbd70f8a48b1decda012c149b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b099dd9bc1a92b90715deddb215f2ed1') in 0.002163 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 44.341296 seconds.
+  path: Assets/Chapter11/ImageSequenceAnimation.unity
+  artifactKey: Guid(8c770edcbd70f8a48b1decda012c149b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Chapter11/ImageSequenceAnimation.unity using Guid(8c770edcbd70f8a48b1decda012c149b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1351dc8c39a2c1c7295e1aba4ff6c42') in 0.001589 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.697305 seconds.
+  path: Assets/Chapter11/ImageSequenceAnimation.shader
+  artifactKey: Guid(ac445e2727291f449bd06074f325b1f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Chapter11/ImageSequenceAnimation.shader using Guid(ac445e2727291f449bd06074f325b1f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40fba6343afa3a7bb3a9826051ed2587') in 0.002872 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.836252 seconds.
+  path: Assets/Chapter11/ImageSequenceAnimation.shader
+  artifactKey: Guid(ac445e2727291f449bd06074f325b1f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Chapter11/ImageSequenceAnimation.shader using Guid(ac445e2727291f449bd06074f325b1f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fc2cc4803619066d6334de61c2b48d3') in 0.060859 seconds 
