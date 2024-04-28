@@ -52,7 +52,7 @@ Shader "Chapter11/ImageSequenceAnimation"
             {
                 float time = floor(_Time.y * _Speed);
                 // time = fmod(time, _num * _num);//因为有_MainTex_ST 所以 这段代码可以省略掉
-                float y = _num - 1 - floor(time / _num);
+                float y = _num - 1 - floor(time / _num);//索引是0到（_num-1)
                 float x = time - y * _num;
     
                 // float2 uv = i.uv / _num;

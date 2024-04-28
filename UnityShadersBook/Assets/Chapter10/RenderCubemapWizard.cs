@@ -9,7 +9,7 @@ public class RenderCubemapWizard : ScriptableWizard
 
     void OnWizardUpdate()
     {
-        helpString = "ѡ��Ҫ��Ⱦ��transform��Ҫ��Ⱦ��cubemap";
+        helpString = "创建CubeMap????????";
         isValid = (renderFromPosition != null) && (cubemap != null);
     }
 
@@ -27,9 +27,9 @@ public class RenderCubemapWizard : ScriptableWizard
         DestroyImmediate(go);
     }
 
-    [MenuItem("GameObject/��Ⱦ����ӳ��")]
+    [MenuItem("GameObject/创建CubeMap")]
     static void RenderCubemap()
     {
-        ScriptableWizard.DisplayWizard<RenderCubemapWizard>("Render cubemap", "��Ⱦ!");
+        ScriptableWizard.DisplayWizard<RenderCubemapWizard>("Render cubemap", "渲染!");
     }
 }
