@@ -1,61 +1,71 @@
 Shader "Chapter11/ImageSequenceAnimation"
 {
-    Properties
+    Properties 
     {
-        _MainTex ("Texture", 2D) = "white" {}
+        _MainTex ("Image Sequence", 2D) = "white" {}
+        _num ("num", float) = 8
+        _Speed("速度", int) = 30 
     }
-    SubShader
+    SubShader 
     {
-        Tags {"Queue" = "Transparent" "IgnoreProjector" = "True" "RenderType" = "Transparent"}
-        Pass
-        { 
+        Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
+        
+        Pass 
+        {
+            Tags { "LightMode"="ForwardBase" }
+            
             ZWrite Off
             Blend SrcAlpha OneMinusSrcAlpha
             
             CGPROGRAM
-            #pragma vertex vert
+            
+            #pragma vertex vert  
             #pragma fragment frag
             
             #include "UnityCG.cginc"
 
-            struct a2v
-            {
-                float4 vertex : POSITION;
-                float2 uv : TEXCOORD0;
-            };
-
-            struct v2f
-            {
-                float4 vertex : SV_POSITION;
-                float2 uv : TEXCOORD0;
-            };
-
             sampler2D _MainTex;
             float4 _MainTex_ST;
-            int num = 8;
-
-            v2f vert (a2v v)
-            {
-                v2f o;
-                o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.uv, _MainTex);               
+            float _num;
+            int _Speed;
+            struct a2v 
+            {  
+                float4 vertex : POSITION; 
+                float2 texcoord : TEXCOORD0;
+            };  
+            
+            struct v2f 
+            {  
+                float4 pos : SV_POSITION;
+                float2 uv : TEXCOORD0;
+            };  
+            
+            v2f vert (a2v v) 
+            {  
+                v2f o;  
+                o.pos = UnityObjectToClipPos(v.vertex);  
+                o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);  
                 return o;
-            }
-
-            float4 frag (v2f i) : SV_Target
-            {               
-                float timer = _Time.y;
-                timer = fmod(timer,64);
-                float y = floor(timer/num);
-                float x = timer - num * y;
-                float2 uv = i.uv / num;
-                uv.x = uv.x + ((1.0f/8.0f-1)*x);
-                uv.y = uv.y + ((1.0f/8.0f-1)*y);
-                float4 col = tex2D(_MainTex, uv);
-                return col;
-                // return float4(timer/64,0,0,1);
+            }  
+            
+            fixed4 frag (v2f i) : SV_Target 
+            {
+                float time = floor(_Time.y * _Speed);
+                // time = fmod(time, _num * _num);//因为有_MainTex_ST 所以 这段代码可以省略掉
+                float y = _num - 1 - floor(time / _num);
+                float x = time - y * _num;
+    
+                // float2 uv = i.uv / _num;
+                // uv.x = uv.x + x / _num;
+                // uv.y = uv.y + y / _num;
+                //上边三行代码可以简化成下边代码
+                float2 uv = float2((i.uv.x+x)/_num, (i.uv.y+y)/_num);
+               
+                fixed4 color = tex2D(_MainTex, uv);
+                return color;
             }
             ENDCG
-        }
+        }  
     }
+    FallBack "Transparent/VertexLit"
 }
