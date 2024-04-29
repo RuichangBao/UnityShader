@@ -1,4 +1,4 @@
-Shader "Unlit/ScrollingBackground"
+Shader "Chapter11/ScrollingBackground"
 {
     Properties
     {
@@ -62,4 +62,5 @@ Shader "Unlit/ScrollingBackground"
             ENDCG
         }
     }
+    FallBack "VertexLit"
 }
