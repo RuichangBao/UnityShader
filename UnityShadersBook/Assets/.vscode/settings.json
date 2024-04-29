@@ -1,22 +1,14 @@
 {
     "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/*.unity": true,
         "**/*.meta": true,
         "**/*.mat": true,
-        "**/*.unity": true,
-        "**/*.FBX": true,
-        "**/*.tga": true,
-        "**/*.asset": true,
-        "**/*.exr": true,
-        "**/*.png": true,
-        "**/*.jpg": true,
         "**/*.cubemap": true,
-        "**/*.JPG": true,
-        "**/*.psd": true,
-        "**/*.absar": true,
-        "**/*.renderTexture": true,
-        "**/*.tif": true,
-        "**/*.pdf": true,
-        "**/*.hdr": true,
-        "**/*.sbsar": true
     }
 }

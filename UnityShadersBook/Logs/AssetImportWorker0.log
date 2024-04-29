@@ -6362,3 +6362,63 @@ Received Import Request.
   path: Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl
   artifactKey: Guid(53686bf58189656459fca4c6ab04ebe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl using Guid(53686bf58189656459fca4c6ab04ebe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b344fc3c09045e77a7d5db04805945eb') in 0.076271 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 796.364939 seconds.
+  path: Assets/Scenes/Chapter10
+  artifactKey: Guid(cc4feb7286770584786d2d3e9b1b264d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Chapter10 using Guid(cc4feb7286770584786d2d3e9b1b264d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60d31439cba2e8bf5af52ad22cd10daa') in 0.002520 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.357697 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(93fbee6d5fb9c374baace5c7767ca82b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(93fbee6d5fb9c374baace5c7767ca82b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76494d4dfaa527a4c7636e6971755632') in 0.001576 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 54.695690 seconds.
+  path: Assets/Standard.unity
+  artifactKey: Guid(10112774846e80b4bb63e21c23929118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Standard.unity using Guid(10112774846e80b4bb63e21c23929118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00168ed93a20cd444a663267aee69fb8') in 0.002148 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.263060 seconds.
+  path: Assets/Test.unity
+  artifactKey: Guid(24e3fb55db008cc40b051fe4554dbda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Test.unity using Guid(24e3fb55db008cc40b051fe4554dbda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11cfd86c290502c6a9a30d98ab35f6f3') in 0.001902 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.428829 seconds.
+  path: Assets/Test.unity
+  artifactKey: Guid(24e3fb55db008cc40b051fe4554dbda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Test.unity using Guid(24e3fb55db008cc40b051fe4554dbda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79b6491949baa3382bcf1cd81cbf199a') in 0.001480 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.320020 seconds.
+  path: Assets/Test.shader
+  artifactKey: Guid(95990495c44020b4d8c05c5e59a2bc47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Test.shader using Guid(95990495c44020b4d8c05c5e59a2bc47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a87d24c609926dd280932f9c360cc320') in 0.003243 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 430.675542 seconds.
+  path: Packages/com.unity.ext.nunit
+  artifactKey: Guid(25a477c2f24db8778a4179421a32cc21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ext.nunit using Guid(25a477c2f24db8778a4179421a32cc21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bef33f36b89a5a284746f1bc5605769f') in 0.002417 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 218.933800 seconds.
+  path: Packages/com.unity.render-pipelines.universal
+  artifactKey: Guid(87f3e00faee74b02e6227b1c727beb50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal using Guid(87f3e00faee74b02e6227b1c727beb50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39bfffdfd469b776bd5a0126fab43a6a') in 0.002068 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1355.657122 seconds.
+  path: Packages/com.unity.render-pipelines.core/Tests/Editor/Volumes
+  artifactKey: Guid(93ab3f290033d9a48b3cce3d26d93f89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.core/Tests/Editor/Volumes using Guid(93ab3f290033d9a48b3cce3d26d93f89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fc033add2c7fbdbbe5cce42715878d2') in 0.003181 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.778020 seconds.
+  path: Packages/com.unity.render-pipelines.universal/ShaderLibrary
+  artifactKey: Guid(2de5b472450204ae2853db2cb6a2540a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/ShaderLibrary using Guid(2de5b472450204ae2853db2cb6a2540a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61ac349ee683b75314cd34222411b2c8') in 0.002313 seconds 
