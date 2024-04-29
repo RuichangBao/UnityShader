@@ -16,8 +16,9 @@ Shader "Chapter11/Water"
         {
             Tags{"LightMode" = "ForwardBase"}
             ZWrite Off
-
+            BlendOp Add
             Blend SrcAlpha OneMinusSrcAlpha
+            Cull Off
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
