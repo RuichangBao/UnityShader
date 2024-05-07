@@ -9,7 +9,6 @@ Shader "Chapter11/Billboard"
     SubShader
     {
         Tags { "Queue" = "Transparent" "RenderType"="Transparent" "IgnoreProjector" = "True" "DisableBatching" = "True"}
-        // Tags { "Queue" = "Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" "DisableBatching"="True"}
 
         Pass
         {

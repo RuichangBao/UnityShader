@@ -10,5 +10,7 @@
         "**/*.meta": true,
         "**/*.mat": true,
         "**/*.cubemap": true,
+        "**/*.fbx":true,
+        "**/*.FBX":true,
     }
 }
