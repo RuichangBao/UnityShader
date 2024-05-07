@@ -12,5 +12,7 @@
         "**/*.cubemap": true,
         "**/*.fbx":true,
         "**/*.FBX":true,
+        "**/*.renderTexture":true,
+        "**/*.cs":true,
     }
 }

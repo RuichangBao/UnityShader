@@ -1,0 +1,34 @@
+using UnityEngine;
+/// <summary>±ßÔµ¼ì²â</summary>
+public class EdgeDetection : PostEffectsBase
+{
+    public Shader edgeDetectShader;
+    private Material edgeDetectMaterial;
+    private Material material
+    {
+        get
+        {
+            edgeDetectMaterial = CheckShaderAndCreateMaterial(edgeDetectShader, edgeDetectMaterial);
+            return edgeDetectMaterial;
+        }
+    }
+    [Range(0.0f, 1.0f)]
+    public float edgesOnly = 0.0f;
+    public Color edgeColor = Color.black;
+    public Color backgroundColor = Color.white;
+    private void OnRenderImage(RenderTexture source, RenderTexture destination)
+    {
+        if (edgeDetectMaterial != null)
+        {
+            material.SetFloat("_EdgeOnly", edgesOnly);
+            material.SetColor("_EdgeColor", edgeColor);
+            material.SetColor("_BackgroundColor", backgroundColor);
+            Graphics.Blit(source, destination, material);
+        }
+        else
+        {
+            Graphics.Blit(source, destination);
+        }
+    }
+
+}
