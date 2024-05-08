@@ -18,7 +18,7 @@ public class EdgeDetection : PostEffectsBase
     public Color backgroundColor = Color.white;
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
-        if (edgeDetectMaterial != null)
+        if (material != null)
         {
             material.SetFloat("_EdgeOnly", edgesOnly);
             material.SetColor("_EdgeColor", edgeColor);
@@ -30,5 +30,4 @@ public class EdgeDetection : PostEffectsBase
             Graphics.Blit(source, destination);
         }
     }
-
 }
