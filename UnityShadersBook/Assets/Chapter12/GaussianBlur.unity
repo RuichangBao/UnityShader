@@ -222,7 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gaussianBlurShader: {fileID: 4800000, guid: df6feb86cd104b54495c2781fa3de60f, type: 3}
   iterations: 1
-  blurSpread: 3
+  blurSpread: 1
   downSample: 1
 --- !u!1 &812695426
 GameObject:

@@ -224,7 +224,7 @@ MonoBehaviour:
   iterations: 1
   blurSpread: 1
   downSample: 4
-  luminanceThreshold: 2.96
+  luminanceThreshold: 4
 --- !u!1 &812695426
 GameObject:
   m_ObjectHideFlags: 0

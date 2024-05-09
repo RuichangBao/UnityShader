@@ -17,7 +17,9 @@ public class GaussianBlur : PostEffectsBase
     public int iterations = 3;
     [Range(0.2f, 3f)]
     public float blurSpread = 0.6f;
-    [Range(1, 8)]
+
+    ///<summary>ÂË²¨±¶Êý</summary>
+    [Range(1, 100)]
     public int downSample = 2;
     /// <summary>
     /// 

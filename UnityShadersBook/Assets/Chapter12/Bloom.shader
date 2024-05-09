@@ -58,6 +58,7 @@ Shader "Chapter12/Bloom"
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
+                //计算亮度的影响,将亮度的影响值规定在0-1之间
                 fixed val = clamp(luminance(col) - _LuminanceThreshold, 0, 1);
                 return col * val;
             }
