@@ -1,3 +1,4 @@
+//边缘检测
 Shader "Chapter12/EdgeDetection"
 {
     Properties
@@ -50,7 +51,7 @@ Shader "Chapter12/EdgeDetection"
                 o.uv[1] = uv + _MainTex_TexelSize * half2(0, -1);
                 o.uv[2] = uv + _MainTex_TexelSize * half2(1, -1);
                 o.uv[3] = uv + _MainTex_TexelSize * half2(-1, 0);
-                o.uv[4] = uv + _MainTex_TexelSize * half2(0, 0);
+                o.uv[4] = uv;
                 o.uv[5] = uv + _MainTex_TexelSize * half2(1, 0);
                 o.uv[6] = uv + _MainTex_TexelSize * half2(-1, 1);
                 o.uv[7] = uv + _MainTex_TexelSize * half2(0, 1);
@@ -67,7 +68,7 @@ Shader "Chapter12/EdgeDetection"
                 // o.uv[8] = uv + half2(1.0f/1820, 1.0f/1024);
                 return o;
             }
-            
+            //计算亮度 0.2125，0.7154，0.0721固定系数
             fixed luminance(fixed4 color)
             {
                 return  0.2125 * color.r + 0.7154 * color.g + 0.0721 * color.b;//亮度
@@ -100,7 +101,7 @@ Shader "Chapter12/EdgeDetection"
                 half edge = 1 - abs(edgeX) - abs(edgeY);
                 return edge;
             }
-           
+            
             fixed4 frag (v2f i) : SV_Target
             {
                 //亮度变化 edge值越小，越可能是边缘
@@ -112,7 +113,6 @@ Shader "Chapter12/EdgeDetection"
                 return lerp(withEdgeColor, onlyEdgeColor, _EdgeOnly);
             }
 
-            
             ENDCG
         }
     }

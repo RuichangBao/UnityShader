@@ -1,4 +1,5 @@
 using UnityEngine;
+
 /// <summary>±ßÔµ¼ì²â</summary>
 public class EdgeDetection : PostEffectsBase
 {

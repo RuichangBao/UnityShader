@@ -399,6 +399,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   briSatConShader: {fileID: 4800000, guid: d382280024d91064b8d7911cf280193c, type: 3}
-  brightness: 3
+  brightness: 1.17
   saturation: 1
-  contrast: 0.94
+  contrast: 1

@@ -40,7 +40,7 @@ public class PostEffectsBase : MonoBehaviour
 		CheckResources();
 	}
 
-	// Called when need to create the material used by this effect
+	//创建效果材质
 	protected Material CheckShaderAndCreateMaterial(Shader shader, Material material)
 	{
 		if (shader == null)

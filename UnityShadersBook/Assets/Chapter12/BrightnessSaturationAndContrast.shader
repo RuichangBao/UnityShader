@@ -9,8 +9,6 @@ Shader "Chapter12/BrightnessSaturationAndContrast"
     }
     SubShader
     {
-        // Tags { "RenderType"="Opaque" }
-
         Pass
         {
             ZTest Always Cull Off Zwrite Off
@@ -46,13 +44,19 @@ Shader "Chapter12/BrightnessSaturationAndContrast"
                 return o;
             }
 
+            //计算亮度 0.2125，0.7154，0.0721固定系数
+            fixed luminance(fixed4 color)
+            {
+                return  0.2125 * color.r + 0.7154 * color.g + 0.0721 * color.b;//亮度
+            }
+
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed4 renderTex = tex2D(_MainTex, i.uv);
-                fixed luminance = 0.2125 * renderTex.x + 0.7154 * renderTex.g + 0.0721 * renderTex.b;//亮度
                 //亮度
+                fixed luminanceNum = luminance(renderTex);
                 fixed3 finalColor = renderTex.rgb * _Brightness;
-                fixed luminanceColor = fixed3(luminance, luminance, luminance);
+                fixed luminanceColor = fixed3(luminanceNum, luminanceNum, luminanceNum);
                 //饱和度影响
                 finalColor = lerp(luminanceColor, finalColor, _Saturation);
                 //对比度

@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
 /// <summary> 亮度饱和度和对比度</summary>
 public class BrightnessSaturationAndContrast : PostEffectsBase
 {
@@ -16,13 +15,13 @@ public class BrightnessSaturationAndContrast : PostEffectsBase
     }
 
     [Range(0, 3)]
-    public float brightness = 1.0f;
+    public float brightness = 1.0f;//亮度
 
     [Range(0, 3)]
-    public float saturation = 1.0f;
+    public float saturation = 1.0f;//饱和度
 
     [Range(0, 3)]
-    public float contrast = 1.0f;
+    public float contrast = 1.0f;//对比度
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
@@ -34,7 +33,6 @@ public class BrightnessSaturationAndContrast : PostEffectsBase
             material.SetFloat("_Contrast", contrast);
             //使用着色器将源纹理复制到目标纹理中
             Graphics.Blit(source, destination, material);
-            //Graphics.Blit(source, destination);
         }
         else
         {

@@ -66,14 +66,14 @@ public class GaussianBlur : PostEffectsBase
             int rtH = source.height / downSample;
             RenderTexture buffer0 = RenderTexture.GetTemporary(rtW, rtH, 0);
             buffer0.filterMode = FilterMode.Bilinear;
-            Graphics.Blit(source, buffer0);
+            Graphics.Blit(source, buffer0);//buffer0 滤波采样
             for (int i = 0; i < iterations; i++)
             {
                 material.SetFloat("_BlurSize", 1.0f + i * blurSpread);
                 RenderTexture buffer1 = RenderTexture.GetTemporary(rtW, rtH, 0);
-                Graphics.Blit(buffer0, buffer1, material, 0);
+                Graphics.Blit(buffer0, buffer1, material, 0);//竖直方向模糊
                 buffer0 = buffer1;
-                buffer1 = RenderTexture.GetTemporary(rtW, rtH, 0);
+                buffer1 = RenderTexture.GetTemporary(rtW, rtH, 0);//水平方向模糊
                 Graphics.Blit(buffer0, buffer1, material, 1);
                 RenderTexture.ReleaseTemporary(buffer0);
                 buffer0 = buffer1;
