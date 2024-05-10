@@ -14,6 +14,7 @@ public class MotionBlur : PostEffectsBase
     }
     [Range(0f, 0.9f)]
     public float blurAmount = 0.5f;
+    //用来保存之前的混合结果
     private RenderTexture accumulationTexture;
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
@@ -25,11 +26,11 @@ public class MotionBlur : PostEffectsBase
                 DestroyImmediate(accumulationTexture);
                 accumulationTexture = new RenderTexture(source.width, source.height, 0);
                 accumulationTexture.hideFlags = HideFlags.HideAndDontSave;
-                Graphics.Blit (source, accumulationTexture);
+                Graphics.Blit(source, accumulationTexture);
             }
             accumulationTexture.MarkRestoreExpected();
-            material.SetFloat("_BlurAmount",1-blurAmount);
-            Graphics.Blit(source, accumulationTexture,material);
+            material.SetFloat("_BlurAmount", 1 - blurAmount);
+            Graphics.Blit(source, accumulationTexture, material);
             Graphics.Blit(accumulationTexture, destination);
         }
         else

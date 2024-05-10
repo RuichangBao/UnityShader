@@ -35,19 +35,36 @@ Shader "Chapter12/MotionBlur"
             o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
             return o;
         }
-        // fixed4
         ENDCG
 
+        ZTest Always Cull Off ZWrite Off
         Pass
         {
+            //拿前几帧得到的结果跟当前帧进行混合
+            Blend SrcAlpha OneMinusSrcAlpha
+            ColorMask RGB
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
 
-            #include "UnityCG.cginc"
-            fixed4 frag (v2f i) : SV_Target
+            fixed4 frag(v2f i):SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
+                return fixed4(col.rgb, _BlurAmount);
+            }
+            ENDCG
+        }
+
+        Pass
+        {
+            Blend One Zero
+            ColorMask A
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            half4 frag(v2f i):SV_Target
+            {
+                half4 col = tex2D(_MainTex, i.uv);
                 return col;
             }
             ENDCG
