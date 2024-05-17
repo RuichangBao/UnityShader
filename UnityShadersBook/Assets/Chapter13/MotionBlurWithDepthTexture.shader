@@ -22,9 +22,12 @@ Shader "Chapter13/MotionBlurWithDepthTexture"
             };
 
             sampler2D _MainTex;
-            half4 _MainTex_TexelSize;
+            half4 _MainTex_TexelSize;//主纹理的纹素大小
+            //深度纹理
             sampler2D _CameraDepthTexture;
+            //当前从裁剪空间变换到世界空间的矩阵
             float4x4 _CurrentViewProjectionInverseMatrix;
+            //上一帧从世界空间变换到裁剪空间的矩阵
             float4x4 _PreviousViewProjectionMatrix;
             half _BlurSize;
 
@@ -46,13 +49,29 @@ Shader "Chapter13/MotionBlurWithDepthTexture"
 
             fixed4 frag (v2f i) : SV_Target
             {
+                //深度值
                 float d = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, i.uv_depth);
-                float H = float4(i.uv.x * 2 - 1, i.uv.y * 2 - 1, d * 2 - 1, 1);
-                float D = mul(_CurrentViewProjectionInverseMatrix, H);
+                //NDC下的坐标
+                float4 H = float4(i.uv.x * 2 - 1, i.uv.y * 2 - 1, d * 2 - 1, 1);
+                //世界坐标
+                float4 D = mul(_CurrentViewProjectionInverseMatrix, H);
                 float4 worldPos = D / D.w;
+                //当前NDC下的坐标
                 float4 currentPos = H;
-                float4 previousPos = 
+                //上一帧NDC下的坐标
+                float4 previousPos = mul(_PreviousViewProjectionMatrix, worldPos);
+                previousPos /= previousPos.w;
+                float2 velocity = (currentPos.xy - previousPos.xy) / 2.0f;
+
+                float2 uv = i.uv;
                 fixed4 col = tex2D(_MainTex, i.uv);
+                uv += velocity * _BlurSize;
+                for(int it = 1; it < 3; it++, uv += velocity * _BlurSize)
+                {
+                    float4 currentColor = tex2D(_MainTex, uv);
+                    col += currentColor;
+                }
+                col /= 3;
                 return col;
             }
             ENDCG

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MotionBlurWithDepthTexture : PostEffectsBase
@@ -28,11 +26,12 @@ public class MotionBlurWithDepthTexture : PostEffectsBase
             return myCamera;
         }
     }
+    //上一帧的视图投影矩阵
     private Matrix4x4 previousViewProjectionMatrix;
 
     private void OnEnable()
     {
-        camera.depthTextureMode |= DepthTextureMode.Depth;
+        camera.depthTextureMode |= DepthTextureMode.Depth;//获取深度纹理
     }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
