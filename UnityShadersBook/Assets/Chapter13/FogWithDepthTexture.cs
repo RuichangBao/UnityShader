@@ -20,6 +20,7 @@ public class FogWithDepthTexture : PostEffectsBase
         {
             if (myCamera == null)
                 myCamera = GetComponent<Camera>();
+            
             return myCamera;
         }
     }
@@ -33,12 +34,20 @@ public class FogWithDepthTexture : PostEffectsBase
             return myCameraTransform;
         }
     }
+    //浓度
     [Range(0, 3)]
     public float fogDensity = 1;
+    //颜色
     public Color fogColor = Color.white;
+    //起始高度
     public float fogStart = 0;
+    //终止高度
     public float fogEnd = 2;
 
+    private void OnEnable()
+    {
+        camera.depthTextureMode |= DepthTextureMode.Depth;
+    }
 
     private void OnRenderImage(RenderTexture src, RenderTexture dest)
     {
@@ -51,6 +60,8 @@ public class FogWithDepthTexture : PostEffectsBase
 
         float fov = camera.fieldOfView;
         float near = camera.nearClipPlane;
+        float far = camera.farClipPlane;
+        //纵横比 height/width
         float aspect = camera.aspect;
 
         float halfHeight = near * Mathf.Tan(fov * 0.5f * Mathf.Deg2Rad);

@@ -27,7 +27,7 @@ Shader "Chapter13/MotionBlurWithDepthTexture"
             sampler2D _CameraDepthTexture;
             //当前从裁剪空间变换到世界空间的矩阵
             float4x4 _CurrentViewProjectionInverseMatrix;
-            //上一帧从世界空间变换到裁剪空间的矩阵
+            //上一帧从世界空间变换到裁剪空间的矩阵,视图*投影矩阵
             float4x4 _PreviousViewProjectionMatrix;
             half _BlurSize;
 
@@ -61,6 +61,7 @@ Shader "Chapter13/MotionBlurWithDepthTexture"
                 //上一帧NDC下的坐标
                 float4 previousPos = mul(_PreviousViewProjectionMatrix, worldPos);
                 previousPos /= previousPos.w;
+                //速度
                 float2 velocity = (currentPos.xy - previousPos.xy) / 2.0f;
 
                 float2 uv = i.uv;
