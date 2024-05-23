@@ -20,7 +20,7 @@ public class FogWithDepthTexture : PostEffectsBase
         {
             if (myCamera == null)
                 myCamera = GetComponent<Camera>();
-            
+
             return myCamera;
         }
     }
@@ -61,7 +61,7 @@ public class FogWithDepthTexture : PostEffectsBase
         float fov = camera.fieldOfView;
         float near = camera.nearClipPlane;
         float far = camera.farClipPlane;
-        //×Ýºá±È height/width
+        //³¤¿í±È width/height
         float aspect = camera.aspect;
 
         float halfHeight = near * Mathf.Tan(fov * 0.5f * Mathf.Deg2Rad);
@@ -74,7 +74,7 @@ public class FogWithDepthTexture : PostEffectsBase
         topLeft.Normalize();
         topLeft *= scale;
 
-        Vector3 topRight = cameraTransform.forward * near + toRight + toTop;
+        Vector3 topRight = cameraTransform.forward * near + toTop + toRight;
         topRight.Normalize();
         topRight *= scale;
 
@@ -82,7 +82,7 @@ public class FogWithDepthTexture : PostEffectsBase
         bottomLeft.Normalize();
         bottomLeft *= scale;
 
-        Vector3 bottomRight = cameraTransform.forward * near + toRight - toTop;
+        Vector3 bottomRight = cameraTransform.forward * near - toTop + toRight;
         bottomRight.Normalize();
         bottomRight *= scale;
 

@@ -900,7 +900,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838242752}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 131048bc4f9714798b11c61e7521016f, type: 3}
   m_Name: 
@@ -919,14 +919,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838242752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ab28eb2f8e2c7443b9e534f338b6e03, type: 3}
+  m_Script: {fileID: 11500000, guid: e27cfbb02b080e942b446530266efe45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fogShader: {fileID: 4800000, guid: 7401a72c44cbd6b408cf403a2d5e6af8, type: 3}
-  fogDensity: 0.27
-  fogColor: {r: 1, g: 1, b: 1, a: 1}
-  fogStart: -1.39
-  fogEnd: 2
+  edgeDetectShader: {fileID: 4800000, guid: 48dfc341e60aaf74f915bd0abeb3d5f7, type: 3}
+  edgesOnly: 0.077
+  edgesColor: {r: 0, g: 0, b: 0, a: 1}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  sampleDistance: 1
+  sensitivityDepth: 1
+  sensitivityNormals: 1
 --- !u!1 &1927954593
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,10 +12,10 @@ Shader "Chapter13/FogWithDepthTexture"
     {
         Pass
         {
+            ZTest Always Cull Off ZWrite Off
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-
 
             #include "UnityCG.cginc"
 
@@ -47,7 +47,8 @@ Shader "Chapter13/FogWithDepthTexture"
             {
                 v2f o;
                 o.pos = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
+                // o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
+                o.uv = v.texcoord;
                 o.uv_depth = v.texcoord;
                 //如果是Direct3D,Metal 平台下 Direct3D,Metal纹理左上角为（0，0）
                 #if UNITY_UV_STARTS_AT_TOP
@@ -86,4 +87,5 @@ Shader "Chapter13/FogWithDepthTexture"
             ENDCG
         }
     }
+    FallBack Off
 }
