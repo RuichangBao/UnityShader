@@ -1,14 +1,18 @@
 //渐变纹理
 Shader "Chapter7/RampTexture" 
 {
-    Properties {
+    Properties 
+    {
         _Color ("纹理颜色", Color) = (1, 1, 1, 1)
         _RampTex ("渐变纹理", 2D) = "white" {}
         _Specular ("Specular", Color) = (1, 1, 1, 1)
         _Gloss ("高光反射", Range(8.0, 256)) = 20
     }
-    SubShader {
-        Pass { 
+
+    SubShader 
+    {
+        Pass 
+        { 
             Tags { "LightMode"="ForwardBase" }
             
             CGPROGRAM
@@ -46,7 +50,6 @@ Shader "Chapter7/RampTexture"
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
                 o.uv = TRANSFORM_TEX(v.texcoord, _RampTex);
-                
                 return o;
             }
             

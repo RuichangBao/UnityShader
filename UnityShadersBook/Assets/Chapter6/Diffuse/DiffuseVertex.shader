@@ -34,7 +34,8 @@ Shader "Chapter6/DiffuseVertex"
                 //环境光
                 fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz;
                 //世界空间下的法线
-                fixed3 worldNormal = normalize(UnityObjectToWorldNormal(v.normal));
+                // fixed3 worldNormal = normalize(UnityObjectToWorldNormal(v.normal));
+                fixed3 worldNormal = normalize(mul(unity_ObjectToWorld, v.normal));
                 //观察方向
                 fixed3 worldLightDir = normalize(_WorldSpaceLightPos0.xyz);
                 //saturate 把输入值限制到[0, 1]之间。dot:返回两个向量的点积。

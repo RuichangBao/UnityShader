@@ -1,3 +1,4 @@
+//全局雾效
 Shader "Chapter13/FogWithDepthTexture"
 {
     Properties

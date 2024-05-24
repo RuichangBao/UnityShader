@@ -923,8 +923,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   edgeDetectShader: {fileID: 4800000, guid: 48dfc341e60aaf74f915bd0abeb3d5f7, type: 3}
-  edgesOnly: 0.077
-  edgesColor: {r: 0, g: 0, b: 0, a: 1}
+  edgesOnly: 0
+  edgeColor: {r: 0, g: 0, b: 0, a: 1}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   sampleDistance: 1
   sensitivityDepth: 1

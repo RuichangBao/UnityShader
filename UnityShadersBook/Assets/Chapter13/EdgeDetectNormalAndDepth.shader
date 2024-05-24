@@ -1,3 +1,4 @@
+//边缘检测
 Shader "Chapter13/EdgeDetectNormalAndDepth"
 {
     Properties
@@ -7,7 +8,7 @@ Shader "Chapter13/EdgeDetectNormalAndDepth"
         _EdgeColor("边缘颜色", Color) = (0,0,0,1)
         _BackgroundColor("背景颜色", Color) = (1,1,1,1)
         _SampleDistance("采样距离", Float) = 1
-        _Sensitivity("灵敏度", Vector) = (1,1,1,1)
+        _Sensitivity("灵敏度", Vector) = (1,1,0,0)
     }
     SubShader
     {
@@ -41,7 +42,7 @@ Shader "Chapter13/EdgeDetectNormalAndDepth"
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
-            float4 _MainTex_TexelSize;
+            float4 _MainTex_TexelSize;//像素
             sampler2D _CameraDepthNormalsTexture;
             float _EdgeOnly;
             float4 _EdgeColor;
@@ -83,10 +84,10 @@ Shader "Chapter13/EdgeDetectNormalAndDepth"
 
             fixed4 frag (v2f i) : SV_Target
             {
-                half4 sample1 = tex2D(_CameraDepthNormalsTexture,i.uv[1]);
-                half4 sample2 = tex2D(_CameraDepthNormalsTexture,i.uv[2]);
-                half4 sample3 = tex2D(_CameraDepthNormalsTexture,i.uv[3]);
-                half4 sample4 = tex2D(_CameraDepthNormalsTexture,i.uv[4]);
+                half4 sample1 = tex2D(_CameraDepthNormalsTexture, i.uv[1]);
+                half4 sample2 = tex2D(_CameraDepthNormalsTexture, i.uv[2]);
+                half4 sample3 = tex2D(_CameraDepthNormalsTexture, i.uv[3]);
+                half4 sample4 = tex2D(_CameraDepthNormalsTexture, i.uv[4]);
                 half edge = 1;
                 edge *= CheckSame(sample1, sample2);
                 edge *= CheckSame(sample3, sample4);
