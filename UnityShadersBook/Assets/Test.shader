@@ -18,8 +18,8 @@ Shader "Unlit/Test"
             {
                 v2f o;
                 o.pos = UnityObjectToClipPos(vertex);
-                // o.worldNormal = mul(normal, (float3x3)unity_WorldToObject);
-                o.worldNormal = mul(unity_ObjectToWorld, normal);
+                 o.worldNormal = mul(normal, (float3x3)unity_WorldToObject);
+                //o.worldNormal = mul(unity_ObjectToWorld, normal);
                 return o;
             }
 
