@@ -1,5 +1,3 @@
-// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
 //切线空间下的凹凸纹理
 Shader "Chapter7/NormalMapTangentSpace"
 {
@@ -62,6 +60,8 @@ Shader "Chapter7/NormalMapTangentSpace"
                 float3 modelLightDir = ObjSpaceLightDir(v.vertex);
                 //模型空间下的视角方向
                 float3 mmodelVierDir = ObjSpaceViewDir(v.vertex);
+                // float3 binormal = cross( normalize(v.normal), normalize(v.tangent.xyz) ) * v.tangent.w;
+                // float3x3 rotation = float3x3(v.tangent.xyz, binormal, v.normal);
                 TANGENT_SPACE_ROTATION;
                 o.lightDir = mul(rotation, modelLightDir).xyz;
                 o.viewDir = mul(rotation, mmodelVierDir).xyz;

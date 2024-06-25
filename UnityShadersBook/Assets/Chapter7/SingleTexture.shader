@@ -45,7 +45,7 @@ Shader "Chapter7/SingleTexture"
                 v2f o;
                 o.pos = UnityObjectToClipPos(v.vertex);
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
-                o.worldPos = mul(unity_ObjectToWorld,v.vertex);
+                o.worldPos = mul(unity_ObjectToWorld, v.vertex);
                 o.uv = v.texcoord.xy * _MainTex_ST.xy + _MainTex_ST.zw;
                 return o;
             }

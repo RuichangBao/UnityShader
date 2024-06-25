@@ -35,7 +35,7 @@ Shader "Chapter9/Shadow"
                 float4 pos : SV_POSITION;
                 fixed3 worldNormal : TEXCOORD0;
                 fixed3 worldPos : TEXCOORD1;
-                //声明一个用于阴影纹理采样的坐标
+                //声明一个用于阴影纹理采样的坐标(物体接受阴影)
                 SHADOW_COORDS(2)
             };
 
@@ -49,7 +49,7 @@ Shader "Chapter9/Shadow"
                 o.pos = UnityObjectToClipPos(v.vertex);
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
-                //在顶点着色器种计算阴影纹理坐标
+                //在顶点着色器种计算阴影纹理坐标(物体接受阴影)
                 TRANSFER_SHADOW(o);
                 return o;
             }
@@ -66,7 +66,7 @@ Shader "Chapter9/Shadow"
                 fixed3 halfDir = normalize(worldLightDir + viewDir);
                 fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(max(0, dot(worldNormal, halfDir)), _Gloss);
                 fixed atten = 1;
-                //在片元着色器种计算阴影值
+                //在片元着色器种计算阴影值(物体接受阴影)
                 fixed shadow = SHADOW_ATTENUATION(i);
                 return fixed4(ambient + (diffuse + specular) * atten * shadow, 1);
             }
@@ -155,5 +155,6 @@ Shader "Chapter9/Shadow"
             ENDCG
         }
     }
+    //物体投射阴影
     FallBack "Specular"
 }

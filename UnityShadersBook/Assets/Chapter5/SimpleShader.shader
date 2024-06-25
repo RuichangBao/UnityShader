@@ -8,15 +8,31 @@ Shader "Chapter5/SimpleShader"
 
             #pragma vertex vert
             #pragma fragment frag
-
-            float4 vert(float4 v : POSITION):SV_POSITION
+            
+            struct a2v
             {
-                return UnityObjectToClipPos(v);
+                float4 vertex : POSITION;
+                float3 normal : NORMAL;
+                float4 texcoord : TEXCOORD0;
+            };
+
+            struct v2f
+            {
+                float4 pos : SV_POSITION;
+                fixed3 color : COLOR0;
+            };
+            
+            v2f vert(a2v v)
+            {
+                v2f o;
+                o.pos = UnityObjectToClipPos(v.vertex);
+                o.color = v.normal * 0.5 + fixed3(0.5, 0.5, 0.5);
+                return o;
             }
 
-            float4 frag():SV_Target
+            fixed4 frag(v2f i):SV_Target
             {
-                return float4(1,1,1,1);
+                return fixed4(i.color, 1);
             }
             ENDCG
         }        
