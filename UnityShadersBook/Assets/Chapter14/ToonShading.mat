@@ -73,10 +73,11 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _OutLine: 0.063
+    - _Outline: 0.03
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SpecularScale: 0
+    - _SpecularScale: 0.007
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1

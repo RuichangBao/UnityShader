@@ -17,7 +17,7 @@ Shader "Chapter15/Dissolve"
         Pass
         {
             Tags { "RenderType" = "ForwardBase" }
-            Cull Off
+            Cull Off //关闭剔除
 
             CGPROGRAM
 
@@ -43,7 +43,7 @@ Shader "Chapter15/Dissolve"
                 float2 uvMainTex : TEXCOORD0;
                 float2 uvBumpMap : TEXCOORD1;
                 float2 uvBurnMap : TEXCOORD2;
-                float3 lightDir : TEXCOORD3;
+                float3 lightDir : TEXCOORD3;//切线空间光照方向
                 float3 worldPos : TEXCOORD4;
                 SHADOW_COORDS(5)
             };
@@ -68,8 +68,8 @@ Shader "Chapter15/Dissolve"
                 o.uvMainTex = TRANSFORM_TEX(v.uv, _MainTex);
                 o.uvBumpMap = TRANSFORM_TEX(v.uv, _BumpMap);
                 o.uvBurnMap = TRANSFORM_TEX(v.uv, _BurnMap);
-                TANGENT_SPACE_ROTATION; //切线空间矩阵
-                o.lightDir = mul(rotation, ObjSpaceLightDir(v.vertex)).xyz;
+                TANGENT_SPACE_ROTATION; //切线空间矩阵 rotation
+                o.lightDir = mul(rotation, ObjSpaceLightDir(v.vertex)).xyz;//切线空间光照方向
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex);
                 TRANSFER_SHADOW(o);
                 return o;
@@ -80,11 +80,11 @@ Shader "Chapter15/Dissolve"
                 fixed3 burn = tex2D(_BurnMap, i.uvBurnMap);
                 clip(burn.r - _BurnAmount);
                 float3 tangentLightDir = normalize(i.lightDir);
-                fixed3 tangentNormal = UnpackNormal(tex2D(_BumpMap, i.uvBumpMap));
-                fixed3 albedo = tex2D(_MainTex, i.uvMainTex);
-                fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz * albedo;
-                fixed3 diffuse = _LightColor0.rgb * albedo * max(0, dot(tangentNormal, tangentLightDir));
-                fixed t = 1 - smoothstep(0, _LineWidth, burn.r - _BurnAmount);
+                fixed3 tangentNormal = UnpackNormal(tex2D(_BumpMap, i.uvBumpMap));//发现贴图
+                fixed3 albedo = tex2D(_MainTex, i.uvMainTex);//主图
+                fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz * albedo;//环境光
+                fixed3 diffuse = _LightColor0.rgb * albedo * max(0, dot(tangentNormal, tangentLightDir));//漫反射
+                fixed t = 1 - smoothstep(0, _LineWidth, burn.r - _BurnAmount);//插值
                 fixed3 burnColor = lerp(_BurnFirstColor, _BurnSecondColor, t);
                 burnColor = pow(burnColor, 5);
                 UNITY_LIGHT_ATTENUATION(atten, i, i.worldPos);

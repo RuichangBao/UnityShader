@@ -16,7 +16,7 @@ Shader "Chapter14/ToonShading"
         Pass
         {
             NAME "OUTLINE"
-            Cull Front
+            Cull Front//剔除正面
             
             CGPROGRAM
             #pragma vertex vert
