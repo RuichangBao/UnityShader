@@ -23,6 +23,7 @@ public class BrightnessSaturationAndContrast : PostEffectsBase
     [Range(0, 3)]
     public float contrast = 1.0f;//对比度
 
+    //抓取屏幕的函数
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
         //Debug.LogError("On Render Image");
